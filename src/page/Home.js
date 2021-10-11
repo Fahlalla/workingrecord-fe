@@ -3,33 +3,41 @@ import Profile from "../Asset/Profile.png";
 const Home = () => {
   return (
     <div className="flex">
-      <div className="w-1/4 text-center bg-green-100">
+      <div className="w-1/6 text-white text-center bg-blue-300">
         <div className="my-8"> Individual</div>
         <div className="my-8">History</div>
         <div className="my-8">Profile</div>
       </div>
-      <div className="w-3/4 bg-green-50">
+      <div className="w-5/6 bg-white-50 ">
         <div className="grid grid-flow-col gap-4">
           <div className="flex">
-            <img src={Profile} alt="Profile" width="100" height="100" />
+            <img src={Profile} alt="Profile" width="200" height="200" />
+            <div>
             <div>ชื่อ ...</div>
+            </div>
           </div>
-          <div>
-            <div>รายได้สุทธิของคุณ 0.00 บาท</div>
-            <div>บันทึก : อยากได้เงินก็กรอกมาสิ</div>
+
+          <div className="flex flex-wrap justify-end content-center">
+            <div className="flex flex-col">
+              <div>
+                <button className="w-56 h-12 text-white bg-black rounded-md">
+                  Add income
+                </button>
+              </div>
+              <div>
+                <button className="w-56 h-12 border border-gray-300 rounded-md">
+                  Issue Problem
+                </button>
+              </div>
+            </div>
           </div>
-          <div className="flex flex-col space-y-3">
-            <button className="flex items-center justify-center w-32 h-8 text-white bg-black rounded-md">
-              Add income
-            </button>
-            <button className="flex items-center justify-center w-32 h-8 border border-gray-300 rounded-md">
-              Issue Problem
-            </button>
-          </div>
+        </div>
+        <div>
+          <div>รายได้สุทธิของคุณ 0.00 บาท</div>
+          <div>บันทึก : อยากได้เงินก็กรอกมาสิ</div>
         </div>
         <form class="relative ml-6 list-disc">
           <div className="flex justify-end">
-            <div>อยากค้นหาอะไรพิมพ์มาเลย ... </div>
             <div className="relative">
               <svg
                 width="20"
@@ -44,63 +52,72 @@ const Home = () => {
                 />
               </svg>
               <input
-                className="focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-10"
+                className=" w-80 focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-10"
                 type="text"
                 aria-label="Search"
-                placeholder="Search"
+                placeholder="อยากค้นหาอะไรพิมพ์มาเลย"
               />{" "}
             </div>
-            <button className="flex items-center justify-center w-32 h-8 text-indigo-600 border border-indigo-300 rounded-md">
+            <button className="flex items-center justify-center w-36 h-10 text-indigo-600 border border-indigo-300 rounded-md">
               Search
             </button>
           </div>
         </form>
 
-        <table className="border border-green-900 table-auto">
+        <table>
           <thead>
             <tr>
-              <th className="border-2 border-pink-900">Name</th>
-              <th className="border-2 border-pink-900">Email</th>
-              <th className="border-2 border-pink-900">Phone Number</th>
-              <th className="border-2 border-pink-900">Contact</th>
-              <th className="border-2 border-pink-900">Site</th>
-              <th className="border-2 border-pink-900">Status</th>
+              <th className="w-1/4 border-2 border-purple-400">Name</th>
+              <th className="w-1/4 border-2 border-blue-500">Email</th>
+              <th className="w-1/4 border-2 border-green-300">Phone Number</th>
+              <th className="w-1/4 border-2 border-yellow-300">Contact</th>
+              <th className="w-1/8 border-2 border-red-300">Site</th>
+              <th className="w-1/8 border-2 border-red-500">Status</th>
+              <th className="w-1/8 border-2 border-pink-300">Bell</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="border-2 border-pink-900">Tadsika Khongkasawan</td>
-              <td className="border-2 border-pink-900">Tadsika@odds.Team</td>
-              <td className="border-2 border-pink-900">0818888888</td>
-              <td className="border-2 border-pink-900">Jill(0888888888)</td>
-              <td className="border-2 border-pink-900">odds</td>
-              <td className="border-2 border-pink-900">Submitted</td>
+              <td className="border-2 border-purple-400">
+                Tadsika Khongkasawan
+              </td>
+              <td claasName="border-2 border-blue-500">Tadsika@odds.team</td>
+              <td className="border-2 border-green-300">0818888888</td>
+              <td className="border-2 border-yellow-300">Jill(0888888888)</td>
+              <td className="border-2 border-red-300">odds</td>
+              <td className="border-2 border-red-500 text-green-600">Submitted</td>
             </tr>
             <tr>
-              <td className="border-2 border-pink-900">Tadsika Khongkasawan</td>
-              <td className="border-2 border-pink-900">Tadsika@odds.Team</td>
-              <td className="border-2 border-pink-900">0818888888</td>
-              <td className="border-2 border-pink-900">Jill(0888888888)</td>
-              <td className="border-2 border-pink-900">odds</td>
-              <td className="border-2 border-pink-900">Submitted</td>
+              <td className="border-2 border-purple-400">
+                Tadsika Khongkasawan
+              </td>
+              <td claasName="border-2 border-blue-500">Tadsika@odds.team</td>
+              <td className="border-2 border-green-300">0818888888</td>
+              <td className="border-2 border-yellow-300">Jill(0888888888)</td>
+              <td className="border-2 border-red-300">odds</td>
+              <td className="border-2 border-red-500 text-green-600">Submitted</td>
             </tr>
             <tr>
-              <td className="border-2 border-pink-900">Tadsika Khongkasawan</td>
-              <td className="border-2 border-pink-900">Tadsika@odds.Team</td>
-              <td className="border-2 border-pink-900">0818888888</td>
-              <td className="border-2 border-pink-900">Jill(0888888888)</td>
-              <td className="border-2 border-pink-900">odds</td>
-              <td className="text-red-600 border-2 border-pink-900 ">
+              <td className="border-2 border-purple-400">
+                Tadsika Khongkasawan
+              </td>
+              <td claasName="border-2 border-blue-500">Tadsika@odds.team</td>
+              <td className="border-2 border-green-300">0818888888</td>
+              <td className="border-2 border-yellow-300">Jill(0888888888)</td>
+              <td className="border-2 border-red-300">odds</td>
+              <td className="text-red-600 border-2 border-red-500 ">
                 Not Submit
               </td>
             </tr>
             <tr>
-              <td className="border-2 border-pink-900">สมชาย ภาษาไทย</td>
-              <td className="border-2 border-pink-900">somchai@odds.Team</td>
-              <td className="border-2 border-pink-900">0818888888</td>
-              <td className="border-2 border-pink-900">Jill(0888888888)</td>
-              <td className="border-2 border-pink-900">odds</td>
-              <td className="text-red-600 border-2 border-pink-900 ">
+              <td className="border-2 border-purple-400">
+                Tadsika Khongkasawan
+              </td>
+              <td claasName="border-2 border-blue-500">Tadsika@odds.team</td>
+              <td className="border-2 border-green-300">0818888888</td>
+              <td className="border-2 border-yellow-300">Jill(0888888888)</td>
+              <td className="border-2 border-red-300">odds</td>
+              <td className="text-red-600 border-2 border-red-500 ">
                 Not Submit
               </td>
             </tr>
