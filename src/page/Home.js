@@ -121,6 +121,16 @@ const Home = () => {
                 Not Submit
               </td>
             </tr>
+            <tr>
+              <td className="border-2 border-pink-900">pui pui</td>
+              <td className="border-2 border-pink-900">pui@odds.Team</td>
+              <td className="border-2 border-pink-900">0818888888</td>
+              <td className="border-2 border-pink-900">Jill(0888888888)</td>
+              <td className="border-2 border-pink-900">odds</td>
+              <td className="text-red-600 border-2 border-pink-900 ">
+                Not Submit
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
