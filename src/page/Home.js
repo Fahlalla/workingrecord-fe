@@ -13,7 +13,9 @@ const Home = () => {
           <div className="flex">
             <img src={Profile} alt="Profile" width="200" height="200" />
             <div>
-            <div>ชื่อ ...</div>
+              <div>ชื่อ ...</div>
+              <div>รายได้สุทธิของคุณ 0.00 บาท</div>
+              <div>บันทึก : อยากได้เงินก็กรอกมาสิ</div>
             </div>
           </div>
 
@@ -32,10 +34,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div>
-          <div>รายได้สุทธิของคุณ 0.00 บาท</div>
-          <div>บันทึก : อยากได้เงินก็กรอกมาสิ</div>
-        </div>
+        <div></div>
         <form class="relative ml-6 list-disc">
           <div className="flex justify-end">
             <div className="relative">
@@ -85,7 +84,9 @@ const Home = () => {
               <td className="border-2 border-green-300">0818888888</td>
               <td className="border-2 border-yellow-300">Jill(0888888888)</td>
               <td className="border-2 border-red-300">odds</td>
-              <td className="border-2 border-red-500 text-green-600">Submitted</td>
+              <td className="border-2 border-red-500 text-green-600">
+                Submitted
+              </td>
             </tr>
             <tr>
               <td className="border-2 border-purple-400">
@@ -95,7 +96,9 @@ const Home = () => {
               <td className="border-2 border-green-300">0818888888</td>
               <td className="border-2 border-yellow-300">Jill(0888888888)</td>
               <td className="border-2 border-red-300">odds</td>
-              <td className="border-2 border-red-500 text-green-600">Submitted</td>
+              <td className="border-2 border-red-500 text-green-600">
+                Submitted
+              </td>
             </tr>
             <tr>
               <td className="border-2 border-purple-400">
