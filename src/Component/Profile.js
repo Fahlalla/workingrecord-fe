@@ -1,7 +1,9 @@
+import image from "../Asset/Profile.png";
+
 const Profile = () => {
     return (
         <div className="flex">
-            <img src={Profile} alt="Profile" width="200" height="200" />
+            <img src={image} alt="Profile" width="200" height="200" />
             <div>
               <div>ชื่อ ...</div>
               <div>รายได้สุทธิของคุณ 0.00 บาท</div>
@@ -10,3 +12,5 @@ const Profile = () => {
           </div>
     )
 } 
+
+export default Profile
