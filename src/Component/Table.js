@@ -23,7 +23,7 @@ const Table = () => {
                     <td className="border-2 border-purple-400">
                         Tadsika Khongkasawan
                     </td>
-                    <td claasName="border-2 border-blue-500">Tadsika@odds.team</td>
+                    <td className="border-2 border-blue-500">Tadsika@odds.team</td>
                     <td className="border-2 border-green-300">0818888888</td>
                     <td className="border-2 border-yellow-300">Jill(0888888888)</td>
                     <td className="border-2 border-red-300">odds</td>
@@ -35,7 +35,7 @@ const Table = () => {
                     <td className="border-2 border-purple-400">
                         Tadsika Khongkasawan
                     </td>
-                    <td claasName="border-2 border-blue-500">Tadsika@odds.team</td>
+                    <td className="border-2 border-blue-500">Tadsika@odds.team</td>
                     <td className="border-2 border-green-300">0818888888</td>
                     <td className="border-2 border-yellow-300">Jill(0888888888)</td>
                     <td className="border-2 border-red-300">odds</td>
@@ -47,7 +47,7 @@ const Table = () => {
                     <td className="border-2 border-purple-400">
                         Tadsika Khongkasawan
                     </td>
-                    <td claasName="border-2 border-blue-500">Tadsika@odds.team</td>
+                    <td className="border-2 border-blue-500">Tadsika@odds.team</td>
                     <td className="border-2 border-green-300">0818888888</td>
                     <td className="border-2 border-yellow-300">Jill(0888888888)</td>
                     <td className="border-2 border-red-300">odds</td>
@@ -59,7 +59,7 @@ const Table = () => {
                     <td className="border-2 border-purple-400">
                         Tadsika Khongkasawan
                     </td>
-                    <td claasName="border-2 border-blue-500">Tadsika@odds.team</td>
+                    <td className="border-2 border-blue-500">Tadsika@odds.team</td>
                     <td className="border-2 border-green-300">0818888888</td>
                     <td className="border-2 border-yellow-300">Jill(0888888888)</td>
                     <td className="border-2 border-red-300">odds</td>
