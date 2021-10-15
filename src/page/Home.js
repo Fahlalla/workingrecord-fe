@@ -1,5 +1,5 @@
-import Menubar from "../Component/Menubar"
-import Profile from "../Component/Profile"
+import Menubar from "../Component/Menubar";
+import Profile from "../Component/Profile";
 import Button from "../Component/button";
 import Search from "../Component/search";
 import Table from "../Component/Table";
