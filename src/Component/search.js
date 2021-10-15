@@ -7,7 +7,7 @@ const Search = () => {
                 width="20"
                 height="20"
                 fill="currentColor"
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                className="absolute text-gray-400 transform -translate-y-1/2 left-3 top-1/2"
               >
                 <path
                   fill-rule="evenodd"
@@ -16,13 +16,13 @@ const Search = () => {
                 />
               </svg>
               <input
-                className=" w-80 focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-10"
+                className="py-2 pl-10 text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md w-80 focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none"
                 type="text"
                 aria-label="Search"
                 placeholder="อยากค้นหาอะไรพิมพ์มาเลย"
               />{" "}
             </div>
-            <button className="flex items-center justify-center w-36 h-10 text-indigo-600 border border-indigo-300 rounded-md">
+            <button className="flex items-center justify-center h-10 ml-2 text-gray-100 bg-indigo-600 rounded-md w-36">
               Search
             </button>
           </div>
