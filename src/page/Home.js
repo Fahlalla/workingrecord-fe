@@ -11,25 +11,15 @@ const Home = () => {
         <Menubar />
       </div>
       <div className="col-start-2 col-end-7">
-        <div className="">
-          <div className="flex justify-between h-auto p-6 m-4 border-2 border-gray-300 rounded-md">
-            <div>
-              <Profile />
-            </div>
-            <div>
-              <Button />
-            </div>
-          </div>
-          <div className="mb-4 mr-4">
-            <div>
-              <Search />
-            </div>
-          </div>
-          <div className="p-8 m-4 border-2 border-gray-300 rounded-md">
-            <div>
-              <Table />
-            </div>
-          </div>
+        <div className="flex justify-between h-auto p-6 m-4 border-2 border-gray-300 rounded-md">
+          <Profile />
+          <Button />
+        </div>
+        <div className="mb-4 mr-4">
+          <Search />
+        </div>
+        <div className="p-8 m-4 border-2 border-gray-300 rounded-md">
+          <Table />
         </div>
       </div>
     </section>
