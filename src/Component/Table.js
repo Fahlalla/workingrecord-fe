@@ -78,11 +78,11 @@ const Table = () => {
               </td>
               <td>
                 {data.status === "Submitted" ? (
-                  <div className="mt-5 w-1/2 text-green-700 bg-green-400 rounded-lg text-center">
+                  <div className="mt-5 w-1/2 text-green-600 bg-green-200 rounded-lg text-center">
                     Submitted
                   </div>
                 ) : (
-                  <div className="mt-5 w-1/2 text-red-700 bg-red-400 rounded-lg text-center">
+                  <div className="mt-5 w-1/2 text-red-600 bg-red-200 rounded-lg text-center">
                     Not Submit
                   </div>
                 )}

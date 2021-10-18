@@ -1,8 +1,7 @@
+import Button from "../Component/button";
 import Menubar from "../Component/Menubar";
 import Profile from "../Component/Profile";
-import Button from "../Component/button";
 import Search from "../Component/search";
-import Table from "../Component/Table";
 
 const HistoryPage = () => {
   return (
@@ -19,7 +18,7 @@ const HistoryPage = () => {
           <Search />
         </div>
         <div className="p-8 m-4 border-2 border-gray-300 rounded-md">
-          <Table />
+          History
         </div>
       </div>
     </section>

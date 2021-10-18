@@ -3,28 +3,24 @@ const Menubar = () => {
   const location = useLocation();
   let MenuList = [
     {
-      dataCy: "menu-individual",
       icon:"./Wall.svg",
       pathName: "/individual",
       name: "Individual",
       activePaths: ["/individual"],
     },
     {
-      dataCy: "menu-history",
       icon:"./History.svg",
       pathName: "/history",
       name: "History",
       activePaths: ["/history"],
     },
     {
-      dataCy: "menu-profile",
       icon:"./Profile.svg",
       pathName: "/profile",
       name: "Profile",
       activePaths: ["/profile"],
     },
     {
-      dataCy: "menu-issue-problem",
       icon:"./Issue.svg",
       pathName: "/issue-problem",
       name: "Issue Problem",
@@ -50,8 +46,7 @@ const Menubar = () => {
           {MenuList.map((menu, index) => {
             return (
               <Link
-                key={`side-bar-${menu.dataCy}`}
-                dataCy={`side-bar-${menu.dataCy}`}
+                key={`side-bar-${menu.name}`}
                 to={menu.pathName}
                 className={`text-md text-left pl-5 pr-2 py-5 cursor-pointer ${
                   isActivePath(index, location.pathname)
@@ -63,7 +58,7 @@ const Menubar = () => {
                   <img
                     src={menu.icon}
                     className={`h-5 mr-5`}
-                    alt={`logo-${menu.dataCy}`}
+                    alt={`logo-${menu.name}`}
                   />
                   {menu.name}
                 </span>

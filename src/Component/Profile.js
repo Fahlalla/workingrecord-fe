@@ -1,17 +1,11 @@
-import image from "../Asset/Profile.png";
 
 const Profile = () => {
   return (
     <div className="flex h-auto">
-      <img
-        className="flex items-center justify-center w-24 h-24 mr-2 rounded-full"
-        src={image}
-        alt="Profile"
-      />
       <div>
-        <div>ชื่อ ...</div>
-        <div>รายได้สุทธิของคุณ 0.00 บาท</div>
-        <div>บันทึก : อยากได้เงินก็กรอกมาสิ</div>
+        <div className="text-3xl">วริศรา พูลเลิศ</div>
+        <div className="flex text-lg">รายได้สุทธิของคุณ 0.00 บาท</div>
+        <div className="flex text-lg"><img className="mr-2" src="./Note.svg" alt="note-icon"/>{" : อยากได้เงินก็กรอกมาสิ"}</div>
       </div>
     </div>
   );
