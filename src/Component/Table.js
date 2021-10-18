@@ -1,189 +1,117 @@
+import styled from "styled-components";
+
+const ButtonNotSubmit = styled.div.attrs({
+  className:
+    "flex items-center rounded-full justify-center h-8 text-gray-100 bg-indigo-600 rounded-md w-24 text-red-600 my-2",
+})`
+  background-color: #ffc9c9;
+`;
+const ButtonSubmitted = styled.div.attrs({
+  className:
+    "flex items-center rounded-full justify-center h-8 text-gray-100 bg-indigo-600 rounded-md w-24 text-green-600 my-2",
+})`
+  background-color: #9ecf7d;
+`;
+
 const Table = () => {
-    return (
-        <table className="space-y-4 text-center">
-            <thead>
-                <tr>
-                    <th className="w-2/12">Name</th>
-                    <th className="w-2/12">Email</th>
-                    <th className="w-2/12">Phone Number</th>
-                    <th className="w-2/12">Contact</th>
-                    <th className="w-2/12">Site</th>
-                    <th className="w-2/12">Status</th>
-                    <th className="w-2/12">Bell</th>
-                </tr>
-
-            </thead>
-            <div className=""></div>
-            <tbody>
-                <tr>
-                    <td >Tadsika Khongkasawan</td>
-                    <td >Tadsika@odds.team</td>
-                    <td >0818888888</td>
-                    <td >Jill(0888888888)</td>
-                    <td >odds</td>
-                    <td className="text-green-600">Submitted</td>
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#444444"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td >Tadsika Khongkasawan</td>
-                    <td >Tadsika@odds.team</td>
-                    <td >0818888888</td>
-                    <td >Jill(0888888888)</td>
-                    <td >odds</td>
-                    <td className="text-green-600">Submitted</td>
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#444444"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td >Tadsika Khongkasawan</td>
-                    <td >Tadsika@odds.team</td>
-                    <td >0818888888</td>
-                    <td >Jill(0888888888)</td>
-                    <td >odds</td>
-                    <td className="text-red-600">Not Submit</td>
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#444444"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td >Tadsika Khongkasawan</td>
-                    <td >Tadsika@odds.team</td>
-                    <td >0818888888</td>
-                    <td >Jill(0888888888)</td>
-                    <td >odds</td>
-                    <td className="text-red-600">Not Submit</td>
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#444444"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td >pui pui</td>
-                    <td >pui@odds.Team</td>
-                    <td >0818888888</td>
-                    <td >Jill(0888888888)</td>
-                    <td >odds</td>
-                    <td className="text-red-600">Not Submit</td>
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#444444"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td >pui pui</td>
-                    <td >pui@odds.Team</td>
-                    <td >0818888888</td>
-                    <td >Jill(0888888888)</td>
-                    <td >odds</td>
-                    <td className="text-red-600">Not Submit</td>
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#444444"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td >pui pui</td>
-                    <td >pui@odds.Team</td>
-                    <td >0818888888</td>
-                    <td >Jill(0888888888)</td>
-                    <td >odds</td>
-                    <td className="text-red-600">Not Submit</td>
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#444444"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td >pui pui</td>
-                    <td >pui@odds.Team</td>
-                    <td >0818888888</td>
-                    <td >Jill(0888888888)</td>
-                    <td >odds</td>
-                    <td className="text-red-600">Not Submit</td>
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#444444"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td >pui pui</td>
-                    <td >pui@odds.Team</td>
-                    <td >0818888888</td>
-                    <td >Jill(0888888888)</td>
-                    <td >odds</td>
-                    <td className="text-red-600">Not Submit</td>
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#444444"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td >pui pui</td>
-                    <td >pui@odds.Team</td>
-                    <td >0818888888</td>
-                    <td >Jill(0888888888)</td>
-                    <td >odds</td>
-                    <td className="text-red-600">Not Submit</td>
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#444444"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td >pui pui</td>
-                    <td >pui@odds.Team</td>
-                    <td >0818888888</td>
-                    <td >Jill(0888888888)</td>
-                    <td >odds</td>
-                    <td className="text-red-600">Not Submit</td>
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#444444"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td >pui pui</td>
-                    <td >pui@odds.Team</td>
-                    <td >0818888888</td>
-                    <td >Jill(0888888888)</td>
-                    <td >odds</td>
-                    <td className="text-red-600">Not Submit</td>
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#444444"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td >pui pui</td>
-                    <td >pui@odds.Team</td>
-                    <td >0818888888</td>
-                    <td >Jill(0888888888)</td>
-                    <td >odds</td>
-                    <td className="text-red-600">Not Submit</td>
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#444444"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
-                    </td>
-                </tr>
-                <tr>
-                    <td >pui pui</td>
-                    <td >pui@odds.Team</td>
-                    <td >0818888888</td>
-                    <td >Jill(0888888888)</td>
-                    <td >odds</td>
-                    <td className="text-red-600">Not Submit</td>
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#444444"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td >pui pui</td>
-                    <td >pui@odds.Team</td>
-                    <td >0818888888</td>
-                    <td >Jill(0888888888)</td>
-                    <td >odds</td>
-                    <td className="text-red-600">Not Submit</td>
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#444444"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" /></svg>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    )
-}
-export default Table
+  return (
+    <div>
+      <table className="text-left mb-4 overflow-y-auto">
+        <thead>
+          <tr>
+            <th className="w-3/12">Name</th>
+            <th className="w-3/12">Email</th>
+            <th className="w-2/12">Phone Number</th>
+            <th className="w-2/12">Contact</th>
+            <th className="w-2/12">Site</th>
+            <th className="w-2/12 pl-5">Status</th>
+          </tr>
+        </thead>
+        <div className="mb-4"></div>
+        <tbody>
+          <tr>
+            <td>Tadsika Khongkasawan</td>
+            <td>Tadsika@odds.team</td>
+            <td>0818888888</td>
+            <td>Jill(0888888888)</td>
+            <td>saksiam</td>
+            <ButtonSubmitted>Submitted</ButtonSubmitted>
+          </tr>
+          <tr>
+            <td>Tadsika Khongkasawan</td>
+            <td>Tadsika@odds.team</td>
+            <td>0818888888</td>
+            <td>Jill(0888888888)</td>
+            <td>saksiam</td>
+            <ButtonSubmitted>Submitted</ButtonSubmitted>
+          </tr>
+          <tr>
+            <td>Tadsika Khongkasawan</td>
+            <td>Tadsika@odds.team</td>
+            <td>0818888888</td>
+            <td>Jill(0888888888)</td>
+            <td>saksiam</td>
+            <ButtonNotSubmit>Not Submit</ButtonNotSubmit>
+          </tr>
+          <tr>
+            <td>Tadsika Khongkasawan</td>
+            <td>Tadsika@odds.team</td>
+            <td>0818888888</td>
+            <td>pea(0888888888)</td>
+            <td>odds</td>
+            <ButtonNotSubmit>Not Submit</ButtonNotSubmit>
+          </tr>
+          <tr>
+            <td>pui pui</td>
+            <td>pui@odds.Team</td>
+            <td>0818888888</td>
+            <td>Jill(0888888888)</td>
+            <td>pea</td>
+            <ButtonNotSubmit>Not Submit</ButtonNotSubmit>
+          </tr>
+          <tr>
+            <td>pui pui</td>
+            <td>pui@odds.Team</td>
+            <td>0818888888</td>
+            <td>Jill(0888888888)</td>
+            <td>pea</td>
+            <ButtonNotSubmit>Not Submit</ButtonNotSubmit>
+          </tr>
+          <tr>
+            <td>pui pui</td>
+            <td>pui@odds.Team</td>
+            <td>0818888888</td>
+            <td>Jill(0888888888)</td>
+            <td>pea</td>
+            <ButtonNotSubmit>Not Submit</ButtonNotSubmit>
+          </tr>
+          <tr>
+            <td>pui pui</td>
+            <td>pui@odds.Team</td>
+            <td>0818888888</td>
+            <td>Jill(0888888888)</td>
+            <td>odds</td>
+            <ButtonNotSubmit>Not Submit</ButtonNotSubmit>
+          </tr>
+          <tr>
+            <td>pui pui</td>
+            <td>pui@odds.Team</td>
+            <td>0818888888</td>
+            <td>Jill(0888888888)</td>
+            <td>odds</td>
+            <ButtonNotSubmit>Not Submit</ButtonNotSubmit>
+          </tr>
+          <tr>
+            <td>pui pui</td>
+            <td>pui@odds.Team</td>
+            <td>0818888888</td>
+            <td>Jill(0888888888)</td>
+            <td>odds</td>
+            <ButtonNotSubmit>Not Submit</ButtonNotSubmit>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  );
+};
+export default Table;

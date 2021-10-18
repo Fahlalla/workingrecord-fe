@@ -1,18 +1,20 @@
-const Button = () => {
-    return(
-        <div className="flex flex-wrap content-center justify-end">
-            <div className="flex flex-col">
-                <button className="w-40 h-12 mb-2 text-white bg-black rounded-md">
-                  Add income
-                </button>
-              <div>
-                <button className="w-40 h-12 border border-gray-300 rounded-md">
-                  Issue Problem
-                </button>
-              </div>
-            </div>
-          </div>
-    )
-}
+import styled from "styled-components";
 
-export default Button
+const ButtonStyle = styled.div.attrs({
+  className:
+    "rounded-full font-bold text-white px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-6",
+})`
+  background-color: #00b6ef;
+`;
+
+const Button = () => {
+  return (
+    <div className="flex flex-wrap content-center justify-end">
+      <div className="flex flex-col">
+        <ButtonStyle>เพิ่มรายการเงินเดือน</ButtonStyle>
+      </div>
+    </div>
+  );
+};
+
+export default Button;
