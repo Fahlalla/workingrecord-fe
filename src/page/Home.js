@@ -6,7 +6,7 @@ import Table from "../Component/Table";
 
 const Home = () => {
   return (
-    <section className="grid grid-cols-6 gap-2">
+    <section className="grid grid-cols-6 gap-2 debug-screens">
       <div className="col-span-1 col-start-1 w-max">
         <Menubar />
       </div>
