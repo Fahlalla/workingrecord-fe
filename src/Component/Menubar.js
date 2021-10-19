@@ -72,7 +72,9 @@ const Menubar = () => {
                 to={data.path}
                 onClick={() => handleActive(index)}
                 className={`my-8 flex m-auto ${
-                  pathIndex === index ? "text-blue-600" : "text-white"
+                  pathIndex === index
+                    ? "text-pink-500 border-b-2 border-pink-500"
+                    : "text-white"
                 }`}
               >
                 {data.logo}
