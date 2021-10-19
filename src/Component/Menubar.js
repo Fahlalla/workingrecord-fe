@@ -71,7 +71,7 @@ const Menubar = () => {
               <Link
                 to={data.path}
                 onClick={() => handleActive(index)}
-                className={`my-8 flex m-auto ${
+                className={`my-8 flex m-auto hover:text-pink-500 ${
                   pathIndex === index
                     ? "text-pink-500 border-b-2 border-pink-500"
                     : "text-white"
