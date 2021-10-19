@@ -48,7 +48,7 @@ const Menubar = () => {
               <Link
                 key={`side-bar-${menu.name}`}
                 to={menu.pathName}
-                className={`text-md text-left pl-5 pr-2 py-5 cursor-pointer ${
+                className={`text-md text-left pl-5 pr-2 py-5 hover:text-pink-500 cursor-pointer ${
                   isActivePath(index, location.pathname)
                     ? "text-blue-500"
                     : "text-white hover:text-blue-500"

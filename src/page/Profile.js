@@ -1,4 +1,4 @@
-import Button from "../Component/button";
+import Button from "../Component/Button";
 import Menubar from "../Component/Menubar";
 import Profile from "../Component/Profile";
 import Search from "../Component/search";
