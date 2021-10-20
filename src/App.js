@@ -1,18 +1,22 @@
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./page/Home";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
-const App = () => {
+import Profile from "./page/Profile";
+export default function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Switch>
         <Route exact path="/">
-          <Redirect to="/individual" />
+          <Home />
         </Route>
-        <Route exact path="/individual" component={Home} />
-        <Route exact path="/history" component={Home} />
-        <Route exact path="/profile" component={Home} />
+        <Route exact path="/individual">
+          <Home />
+        </Route>
+        <Route exact path="/profile">
+          <Profile />
+        </Route>
       </Switch>
-    </BrowserRouter>
+    </Router>
   );
-};
-export default App;
+}
