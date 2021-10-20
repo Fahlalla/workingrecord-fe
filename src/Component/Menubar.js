@@ -1,6 +1,7 @@
 import logoOdds from "../Asset/logo-odds.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Summary from "./Summary";
 
 const Menubar = () => {
   const [pathIndex, setPathIndex] = useState();
@@ -38,6 +39,20 @@ const Menubar = () => {
       />
     </svg>
   );
+  const summary = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-5 w-5 mr-2"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  );
 
   const menuItem = [
     {
@@ -54,6 +69,11 @@ const Menubar = () => {
       name: "Profile",
       path: "/profile",
       logo: profile,
+    },
+    {
+      name: "Summary",
+      path: "/summary",
+      logo: summary,
     },
   ];
 
