@@ -39,6 +39,21 @@ const Menubar = () => {
     </svg>
   );
 
+  const summaryPayment = (
+    <svg
+      className="h-5 w-5 mr-2"
+      viewBox="0 0 12 16"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M12 2H2.83L8.83 8L2.83 14H12V16H0V14L6 8L0 2V0H12V2Z"
+      />
+    </svg>
+  );
+
   const menuItem = [
     {
       name: "Individual",
@@ -55,6 +70,11 @@ const Menubar = () => {
       path: "/profile",
       logo: profile,
     },
+    {
+      name: "Summary Payment",
+      path: "/summary-payment",
+      logo: summaryPayment,
+    },
   ];
 
   const handleActive = (index) => {
@@ -63,7 +83,7 @@ const Menubar = () => {
 
   return (
     <div className="flex">
-      <div className="h-screen px-10 text-center text-white bg-gray-800">
+      <div className="h-screen p-4 w-64 text-center text-white bg-gray-800">
         <img src={logoOdds} alt="logo" className="mt-6" />
         {menuItem.map((data, index) => {
           return (
