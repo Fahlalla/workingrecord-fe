@@ -23,6 +23,9 @@ const PersonalInfo = () => {
           <ProfileInput label="แขวง/ตำบล" />
           <ProfileInput label="รหัสไปรษณีย์" />
         </div>
+        <div className="flex space-x-10">
+          <ProfileInput label="รูปบัตรประชาชน" />
+        </div>
       </div>
     </div>
   );
