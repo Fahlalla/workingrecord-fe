@@ -1,4 +1,5 @@
 import ProfileInput from "../Profile/ProfileInput.js";
+import UploadFile from "./UploadFile.js";
 
 const PersonalInfo = () => {
   return (
@@ -24,7 +25,7 @@ const PersonalInfo = () => {
           <ProfileInput label="รหัสไปรษณีย์" />
         </div>
         <div className="flex space-x-10">
-          <ProfileInput label="รูปบัตรประชาชน" />
+          <UploadFile label="รูปบัตรประชาชน" />
         </div>
       </div>
     </div>

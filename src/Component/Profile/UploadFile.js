@@ -1,14 +1,16 @@
-const UploadFile = ({ label, disabled, isMultiple }) => {
+const UploadFile = ({ label }) => {
   return (
-    <div className="flex-col">
+    <div className="flex-col ">
       <div>{label}</div>
-      <input
-        disabled={disabled}
-        multiple={isMultiple}
-        className={`py-2 pl-10 text-sm text-black shadow-md border border-gray-200 rounded-md w-80 focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none ${disabled && "bg-gray-300"
-          }`}
-        type="file"
-      />
+      <div class="relative h-40 rounded-lg border-dashed border-2 border-gray-200 bg-white flex justify-center items-center hover:cursor-pointer">
+        <div class="absolute">
+          <div class="flex flex-col items-center ">
+            <i class="fa fa-cloud-upload fa-3x text-gray-200"></i>
+            <span class="block text-blue-400 font-normal">Upload files</span>
+          </div>
+        </div>
+        <input type="file" class="h-full w-full opacity-0" name="" />
+      </div>
     </div>
   );
 };
