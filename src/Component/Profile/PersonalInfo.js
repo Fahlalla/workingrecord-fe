@@ -1,5 +1,6 @@
 import ProfileInput from "../Profile/ProfileInput.js";
 import UploadFile from "./UploadFile.js";
+import DropdownInput from "./DropdownInput.js";
 
 const PersonalInfo = () => {
   return (
@@ -17,11 +18,11 @@ const PersonalInfo = () => {
         </div>
         <div className="flex space-x-10">
           <ProfileInput label="ที่อยู่" />
-          <ProfileInput label="จังหวัด" />
-          <ProfileInput label="เขต/อำเภอ" />
+          <DropdownInput label="จังหวัด" />
+          <DropdownInput label="เขต/อำเภอ" />
         </div>
         <div className="flex space-x-10">
-          <ProfileInput label="แขวง/ตำบล" />
+          <DropdownInput label="แขวง/ตำบล" />
           <ProfileInput label="รหัสไปรษณีย์" />
         </div>
         <div className="flex space-x-10">
