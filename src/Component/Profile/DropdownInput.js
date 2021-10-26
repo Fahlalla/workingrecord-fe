@@ -2,7 +2,7 @@ const DropdownInput = ({ label, options }) => {
   let optionList =
     options.length > 0 &&
     options.map((item, i) => {
-      return <option>{item.value}</option>;
+      return <option key= {item.value}>{item.value}</option>;
     });
 
   return (

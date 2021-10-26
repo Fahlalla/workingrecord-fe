@@ -8,6 +8,17 @@ const PersonalInfo = () => {
     { value: "Khon Kaen" },
     { value: "Nan" },
   ];
+  const district = [
+    { value: "Muaeng" },
+    { value: "Chatuchuk" },
+    { value: "Lad krabang" },
+  ];
+  const subDistrict = [
+    { value: "Nai Muaeng" },
+    { value: "Non Muang" },
+    { value: "Nan" },
+  ];
+
   return (
     <div className="flex h-auto">
       <div className="flex-col space-y-5">
@@ -24,10 +35,10 @@ const PersonalInfo = () => {
         <div className="flex space-x-10">
           <ProfileInput label="ที่อยู่" />
           <DropdownInput label="จังหวัด" options={province} />
-          <DropdownInput label="เขต/อำเภอ" options={[]} />
+          <DropdownInput label="เขต/อำเภอ" options={district} />
         </div>
         <div className="flex space-x-10">
-          <DropdownInput label="แขวง/ตำบล" options={[]} />
+          <DropdownInput label="แขวง/ตำบล" options={subDistrict} />
           <ProfileInput label="รหัสไปรษณีย์" />
         </div>
         <div className="flex space-x-10">
