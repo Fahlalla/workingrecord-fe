@@ -10,7 +10,7 @@ const DatePickers = () => {
   return (
     // <div className="border-gray-400">
     <DatePicker
-      className="bg-green-500"
+      className=""
       selected={startDate}
       onChange={(date) => setStartDate(date)}
     />

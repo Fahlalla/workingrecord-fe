@@ -34,11 +34,16 @@ const Summary = () => {
             </ContainerTabMenu>
           </div>
           <div className="flex justify-end">
-            <div className="rounded-md">
-              <DatePickers />
-            </div>
             <div>
-              <Button />
+              <p className="text-lg font-bold"> Date: </p>
+              <div className="flex flex-col justify-center items-center rounded-md h-14 border-2 border-gray-300">
+                <DatePickers />
+              </div>
+            </div>
+            <div className="flex flex-col justify-end ml-6">
+              <button className="font-bold w-40 h-14 text-white bg-blue-400 rounded-full">
+                Export
+              </button>
             </div>
           </div>
         </div>
