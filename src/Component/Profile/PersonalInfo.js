@@ -3,6 +3,11 @@ import UploadFile from "./UploadFile.js";
 import DropdownInput from "./DropdownInput.js";
 
 const PersonalInfo = () => {
+  const province = [
+    { value: "Bangkok" },
+    { value: "Khon Kaen" },
+    { value: "Nan" },
+  ];
   return (
     <div className="flex h-auto">
       <div className="flex-col space-y-5">
@@ -18,11 +23,11 @@ const PersonalInfo = () => {
         </div>
         <div className="flex space-x-10">
           <ProfileInput label="ที่อยู่" />
-          <DropdownInput label="จังหวัด" />
-          <DropdownInput label="เขต/อำเภอ" />
+          <DropdownInput label="จังหวัด" options={province} />
+          <DropdownInput label="เขต/อำเภอ" options={[]} />
         </div>
         <div className="flex space-x-10">
-          <DropdownInput label="แขวง/ตำบล" />
+          <DropdownInput label="แขวง/ตำบล" options={[]} />
           <ProfileInput label="รหัสไปรษณีย์" />
         </div>
         <div className="flex space-x-10">
