@@ -1,6 +1,6 @@
 import logoOdds from "../Asset/logo-odds.png";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const Menubar = () => {
   const [pathIndex, setPathIndex] = useState();
@@ -83,7 +83,7 @@ const Menubar = () => {
         <img src={logoOdds} alt="logo" className="mt-6" />
         {menuItem.map((data, index) => {
           return (
-            <>
+            <React.Fragment key= {data.path}>
               <Link
                 to={data.path}
                 onClick={() => setPathIndex(index)}
@@ -97,7 +97,7 @@ const Menubar = () => {
                 {data.logo}
                 <span key={index}>{data.name}</span>
               </Link>
-            </>
+            </React.Fragment>
           );
         })}
       </div>
