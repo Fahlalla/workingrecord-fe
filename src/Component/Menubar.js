@@ -32,9 +32,24 @@ const Menubar = () => {
       fill="currentColor"
     >
       <path
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+
+  const summaryPayment = (
+    <svg
+      className="h-5 w-5 mr-2"
+      viewBox="0 0 12 16"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M12 2H2.83L8.83 8L2.83 14H12V16H0V14L6 8L0 2V0H12V2Z"
       />
     </svg>
   );
@@ -55,30 +70,32 @@ const Menubar = () => {
       path: "/profile",
       logo: profile,
     },
+    {
+      name: "Summary Payment",
+      path: "/summary-payment",
+      logo: summaryPayment,
+    },
   ];
 
-  const handleActive = (index) => {
-    setPathIndex(index);
-  };
-
   return (
-    <div className="flex">
-      <div className="h-screen px-10 text-center text-white bg-gray-800">
+    <div className="flex items-start content-start h-full">
+      <div className="h-screen p-4 w-64 text-center text-white bg-gray-800">
         <img src={logoOdds} alt="logo" className="mt-6" />
         {menuItem.map((data, index) => {
           return (
             <>
               <Link
                 to={data.path}
-                onClick={() => handleActive(index)}
+                onClick={() => setPathIndex(index)}
                 className={`my-8 flex m-auto hover:text-pink-500 ${
                   pathIndex === index
                     ? "text-pink-500 border-b-2 border-pink-500"
                     : "text-white"
                 }`}
+                key={data.path}
               >
                 {data.logo}
-                <span>{data.name}</span>
+                <span key={index}>{data.name}</span>
               </Link>
             </>
           );
