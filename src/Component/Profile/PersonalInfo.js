@@ -22,6 +22,7 @@ const PersonalInfo = () => {
   return (
     <div className="flex h-auto">
       <div className="flex-col space-y-5">
+        <div className="font-bold text-2xl">ประวัติส่วนตัว</div>
         <div className="flex space-x-10">
           <ProfileInput label="ชื่อ" />
           <ProfileInput label="นามสกุล" />
@@ -44,6 +45,7 @@ const PersonalInfo = () => {
         <div className="flex space-x-10">
           <UploadFile label="รูปบัตรประชาชน" />
         </div>
+        
       </div>
     </div>
   );

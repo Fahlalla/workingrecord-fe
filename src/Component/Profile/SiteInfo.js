@@ -3,10 +3,10 @@ import ProfileInput from "../Profile/ProfileInput.js";
 const SiteInfo = () => {
   return (
     <div className="flex flex-row h-auto">
-      <div className="">
-        <h1>Site</h1>
-      </div>
       <div className="flex-col space-y-5">
+        <div className="">
+          <div className="font-bold text-2xl">Site</div>
+        </div>
         <div className="flex space-x-10">
           <ProfileInput label="Site" />
           <ProfileInput label="Team" />
