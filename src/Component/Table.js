@@ -1,3 +1,5 @@
+import { IndividualInformation as TableData } from "../IndividualInformation";
+
 const Table = () => {
   const NotSubmitted = () => {
     return (
@@ -14,88 +16,6 @@ const Table = () => {
     );
   };
 
-  const tableData = [
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      contact: "Jill(0888888888)",
-      site: "PEA",
-      status: false,
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      contact: "Jill(0888888888)",
-      site: "PEA",
-      status: false,
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      contact: "Jill(0888888888)",
-      site: "PEA",
-      status: false,
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      contact: "Jill(0888888888)",
-      site: "PEA",
-      status: false,
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      contact: "Jill(0888888888)",
-      site: "PEA",
-      status: false,
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      contact: "Jill(0888888888)",
-      site: "PEA",
-      status: false,
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      contact: "Jill(0888888888)",
-      site: "PEA",
-      status: false,
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      contact: "Jill(0888888888)",
-      site: "PEA",
-      status: false,
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      contact: "Jill(0888888888)",
-      site: "PEA",
-      status: false,
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      contact: "Jill(0888888888)",
-      site: "PEA",
-      status: true,
-    },
-  ];
   return (
     <table className="text-left">
       <thead className="border-b-2 mb-2">
@@ -110,7 +30,7 @@ const Table = () => {
         </tr>
       </thead>
       <tbody>
-        {tableData.map((data, index) => {
+        {TableData.map((data, index) => {
           return (
             <tr className="h-10" key={index}>
               <td>{data.name}</td>
