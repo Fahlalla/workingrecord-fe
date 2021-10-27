@@ -1,5 +1,5 @@
 import { IndividualInformation as TableData } from "../IndividualInformation";
-import cloud_upload from "../Asset/cloud_upload.png"
+import cloud_upload from "../Asset/cloud_upload.png";
 
 const SummaryTable = () => {
   return (
@@ -20,16 +20,13 @@ const SummaryTable = () => {
         {TableData.map((data, index) => {
           return (
             <tr className="h-10" key={index}>
-              <td>{index+1}</td>
+              <td>{index + 1}</td>
               <td>{data.name}</td>
               <td>{data.accountNumber}</td>
               <td>{data.dailyIncome}</td>
               <td>{data.totalSalary}</td>
               <td>{data.manDay}</td>
               <td>{data.Upload}</td>
-          
-              
-            
             </tr>
           );
         })}
