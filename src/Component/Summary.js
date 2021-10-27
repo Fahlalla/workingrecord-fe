@@ -5,9 +5,9 @@ import Button from "./button";
 import Search from "./search";
 import DatePickers from "./DatePicker";
 
-const ContainerTabMenu = styled.div.attrs({})`
-  border-bottom: 2px solid #eaeaea;
-`;
+const ContainerTabMenu = styled.div.attrs({
+  // className: "flex border-b-2 border-gray-200 justify-between"
+})``;
 
 const Summary = () => {
   return (
@@ -18,7 +18,7 @@ const Summary = () => {
       <div className="w-full pt-4 px-12">
         <div className="text-3xl mb-14 font-bold">Summary</div>
         <div className="flex justify-between">
-          <div>
+          <div className="flex flex-col justify-end">
             <ContainerTabMenu>
               <ul className="flex cursor-pointer">
                 <li className="py-2 px-6 bg-white rounded-t-lg">
@@ -33,7 +33,7 @@ const Summary = () => {
               </ul>
             </ContainerTabMenu>
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-end mb-4">
             <div>
               <p className="text-lg font-bold"> Date: </p>
               <div className="flex flex-col justify-center items-center rounded-md h-14 border-2 border-gray-300">
@@ -47,6 +47,7 @@ const Summary = () => {
             </div>
           </div>
         </div>
+        <div className="border-b-2 border-blue-400"></div>
 
         <div className="flex flex-col w-full pt-4 px-12">
           <div className="mt-8">
