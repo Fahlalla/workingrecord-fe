@@ -1,6 +1,7 @@
 import PersonalInfo from "../Component/Profile/PersonalInfo";
 import SiteInfo from "../Component/Profile/SiteInfo";
 import BankAccountInfo from "../Component/Profile/BankAccountInfo";
+import ProfileButton from "../Component/Profile/ProfileButton";
 
 const ProfilePage = () => {
   return (
@@ -8,6 +9,10 @@ const ProfilePage = () => {
       <PersonalInfo />
       <SiteInfo />
       <BankAccountInfo />
+      <div className="flex flex-wrap content-center justify-center space-x-20 pb-10">
+        <ProfileButton color='bg-black' >ล้างข้อมูล</ProfileButton>
+        <ProfileButton color='bg-blue-600'>ยืนยันข้อมูล</ProfileButton>
+      </div>
     </div>
   );
 };
