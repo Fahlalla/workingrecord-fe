@@ -13,6 +13,7 @@ const DatePickers = () => {
       className=""
       selected={startDate}
       onChange={(date) => setStartDate(date)}
+      dateFormat="dd/MMMM/yyyy"
     />
     // </div>
   );
