@@ -42,14 +42,11 @@ const Menubar = () => {
   const summary = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-5 w-5 mr-2"
+      className="h-5 w-5 ml-1 mr-1"
       viewBox="0 0 20 20"
       fill="currentColor"
     >
-      <path
-        fill-rule="evenodd"
-        d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-        clip-rule="evenodd"
+      <path d="M12 2H2.83L8.83 8L2.83 14H12V16H0V14L6 8L0 2V0H12V2Z"
       />
     </svg>
   );
