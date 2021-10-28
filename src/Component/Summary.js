@@ -19,9 +19,9 @@ const Summary = () => {
         <div className="text-3xl mb-14 font-bold">Summary</div>
         <div className="flex justify-between">
           <div className="flex flex-col justify-end">
-            <ContainerTabMenu>
+            <div>
               <ul className="flex cursor-pointer">
-                <li className="py-2 px-6 bg-white rounded-t-lg">
+                <li className="py-2 px-6 bg-white rounded-t-lg bg-blue-400">
                   รายการที่กรอกแล้ว
                 </li>
                 <li className="py-2 px-6 bg-white rounded-t-lg text-gray-500 bg-gray-200">
@@ -31,7 +31,7 @@ const Summary = () => {
                   คนที่ยังไม่ได้กรอก
                 </li>
               </ul>
-            </ContainerTabMenu>
+            </div>
           </div>
           <div className="flex justify-end mb-4">
             <div>
@@ -55,6 +55,12 @@ const Summary = () => {
           </div>
           <div className="mt-8">
             <Table />
+          </div>
+        </div>
+        <div className="flex justify-center ">
+          <div className="flex justify-between w-80 h-12 bg-white  text-gray-800 font-bold rounded border-2 py-2 px-6 inline-flex items-center my-4">
+            <div className="">ยอดรวมทั้งหมด</div>
+            <div>XXXXXXXX</div>
           </div>
         </div>
       </div>
