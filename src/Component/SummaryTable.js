@@ -1,10 +1,10 @@
 import { IndividualInformation as TableData } from "../IndividualInformation";
-import cloud_upload from "../Asset/cloud_upload.png";
+
 
 const SummaryTable = () => {
   return (
     <table className="text-center ">
-      <thead className="border-b-2 mb-2 ">
+      <thead className="mb-2 border-b-2 ">
         <tr>
           <th className="w-1/24">No.</th>
           <th className="w-2/12">Full Name</th>
