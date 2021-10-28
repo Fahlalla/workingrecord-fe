@@ -5,7 +5,7 @@ import ProfileButton from "../Component/Profile/ProfileButton";
 
 const ProfilePage = () => {
   return (
-    <div className="flex flex-col w-full pt-4 px-12">
+    <div className="flex flex-col w-full pt-4 px-12 overflow-y-scroll">
       <PersonalInfo />
       <SiteInfo />
       <BankAccountInfo />

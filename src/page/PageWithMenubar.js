@@ -12,7 +12,7 @@ const PageWithMenubar = () => {
   });
   return (
     <React.Fragment>
-      <div className="flex h-full w-full">
+      <div className="flex h-screen w-full">
         <Router>
           <Menubar />
           <Switch>
