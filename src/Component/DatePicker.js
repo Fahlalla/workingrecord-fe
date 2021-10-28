@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 
-// import required css from library
 import "react-datepicker/dist/react-datepicker.css";
+import th from "date-fns/locale/th";
 
-// main implementation. using selected and onChange as main props to get and change the selected date value
 const DatePickers = () => {
   const [startDate, setStartDate] = useState(new Date());
+
   return (
     // <div className="border-gray-400">
     <DatePicker
-      className=""
+      className="py-3 px-3"
       selected={startDate}
       onChange={(date) => setStartDate(date)}
-      dateFormat="dd/MMMM/yyyy"
+      dateFormat="MMMM yyyy"
+      locale={th}
     />
     // </div>
   );
