@@ -1,6 +1,7 @@
 import ProfileInput from "../Profile/ProfileInput.js";
 import UploadFile from "./UploadFile.js";
 import DropdownInput from "./DropdownInput.js";
+import ProfileIcon from "../../Asset/profile-icon.svg";
 
 const PersonalInfo = () => {
   const province = [
@@ -22,7 +23,10 @@ const PersonalInfo = () => {
   return (
     <div className="flex h-auto">
       <div className="flex-col space-y-5">
-        <div className="font-bold text-2xl">ประวัติส่วนตัว</div>
+        <div className="flex font-bold text-2xl">
+          ประวัติส่วนตัว
+          <img src={ProfileIcon} className="items-center w-6 ml-2"/>
+        </div>
         <div className="flex space-x-10">
           <ProfileInput label="ชื่อ" />
           <ProfileInput label="นามสกุล" />
@@ -45,7 +49,6 @@ const PersonalInfo = () => {
         <div className="flex space-x-10">
           <UploadFile label="รูปบัตรประชาชน" />
         </div>
-        
       </div>
     </div>
   );
