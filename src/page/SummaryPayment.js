@@ -20,6 +20,15 @@ const SummaryPayment = () => {
       </div>
       <div className="mt-8">
         <SummaryTable />
+        <div className="flex justify-center font-bold text-lg">รวมยอดเงิน 3,000,000 บาท </div>
+        <div></div>
+        <div>
+         <div className="flex flex-wrap content-center justify-center">
+             <button className="font-bold w-80 h-14 text-white rounded-full text-lg " style = {{backgroundColor:'#00B6EF'}}>
+                ยืนยันการโอนครบถ้วน และส่งให้บัญชี
+              </button>
+          </div>
+      </div>
       </div>
     </div>
   );
