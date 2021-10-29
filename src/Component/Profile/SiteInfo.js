@@ -2,7 +2,7 @@ import ProfileInput from "../Profile/ProfileInput.js";
 
 const SiteInfo = () => {
   return (
-    <div className="flex flex-row h-auto">
+    <div className="flex flex-row h-auto pt-8">
       <div className="flex-col space-y-5">
         <div className="">
           <div className="font-bold text-2xl">Site</div>
