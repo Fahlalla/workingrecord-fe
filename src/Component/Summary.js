@@ -36,7 +36,7 @@ const Summary = () => {
           <div className="flex justify-end mb-4">
             <div>
               <p className="text-lg font-bold"> Date: </p>
-              <div className="flex flex-col justify-center items-center rounded-md h-14 border-2 border-gray-300">
+              <div className="flex flex-col justify-center items-center">
                 <DatePickers />
               </div>
             </div>
