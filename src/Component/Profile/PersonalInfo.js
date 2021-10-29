@@ -2,6 +2,7 @@ import ProfileInput from "../Profile/ProfileInput.js";
 import UploadFile from "./UploadFile.js";
 import DropdownInput from "./DropdownInput.js";
 import ProfileIcon from "../../Asset/profile-icon.svg";
+import DateInput from "./DateInput.js";
 
 const PersonalInfo = () => {
   const province = [
@@ -33,7 +34,7 @@ const PersonalInfo = () => {
           <ProfileInput label="เลขบัตรประชาชน" />
         </div>
         <div className="flex space-x-10">
-          <ProfileInput label="วัน เดือน ปีเกิด" />
+          <DateInput label="วัน เดือน ปีเกิด" />
           <ProfileInput label="เบอร์โทรศัพท์" />
           <ProfileInput label="E-mail" disabled />
         </div>
