@@ -132,12 +132,12 @@ const SummaryTable = () => {
           <tr>
             <th className="w-2/12">Full Name</th>
             <th className="w-2/12">Email</th>
-            <th className="w-2/12">Phone</th>
-            <th className="w-2/12">Account Name</th>
-            <th className="w-2/12">Account Number</th>
-            <th className="w-2/12">Submit date</th>
-            <th className="w-2/12">Total salary</th>
-            <th className="w-2/12">Status</th>
+            <th className="w-1/12">Phone</th>
+            <th className="w-1/12">Account Name</th>
+            <th className="w-2/12 pl-5">Account Number</th>
+            <th className="w-1/12">Submit date</th>
+            <th className="w-1/12">Total salary</th>
+            <th className="w-1/12">Status</th>
             <th className="w-2/12">Transfer By</th>
           </tr>
         </thead>
@@ -149,7 +149,7 @@ const SummaryTable = () => {
                 <td>{data.email}</td>
                 <td>{data.phone}</td>
                 <td>{data.accountName}</td>
-                <td>{data.accountNumber}</td>
+                <td className="pl-5">{data.accountNumber}</td>
                 <td>{data.submitDate}</td>
                 <td>{data.totalSalary}</td>
                 {data.status ? (
