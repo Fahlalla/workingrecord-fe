@@ -1,13 +1,8 @@
 import Menubar from "./Menubar";
 import styled from "styled-components";
-import Table from "./Table";
-import Button from "./button";
 import Search from "./search";
 import DatePickers from "./DatePicker";
-
-const ContainerTabMenu = styled.div.attrs({
-  // className: "flex border-b-2 border-gray-200 justify-between"
-})``;
+import SummaryTable from "./SummaryTable";
 
 const Summary = () => {
   return (
@@ -49,12 +44,12 @@ const Summary = () => {
         </div>
         <div className="border-b-2 border-blue-400"></div>
 
-        <div className="flex flex-col w-full pt-4 px-12">
+        <div className="flex flex-col w-full pt-4 px-6">
           <div className="mt-8">
             <Search />
           </div>
-          <div className="mt-8">
-            <Table />
+          <div className="mt-8 overflow-scroll">
+            <SummaryTable />
           </div>
         </div>
         <div className="flex justify-center ">
