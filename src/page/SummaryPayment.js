@@ -1,16 +1,18 @@
+import { useState } from "react";
 import Card from "../Component/Card.js";
 import WorklogSum from "../Component/WorklogSum.js";
 import SummaryTable from "../Component/SummaryTable.js";
-import Datepicker from "../Component/DatePicker.js";
+import MonthPicker from "../Component/MonthPicker.js";
 
 
 const SummaryPayment = () => {
+  const [selectMonth, setSelectMonth] = useState(new Date());
   return (
     <div className="flex flex-col w-full px-12 pt-4 ">
       <div className="flex justify-between space-y-2">
-        <WorklogSum />
+        <WorklogSum month={selectMonth} />
         <div>
-          <Datepicker />
+          <MonthPicker month={selectMonth} setSelectMonth={setSelectMonth}/>
         </div>
       </div>
       <div className="flex justify-between mt-8">
