@@ -11,7 +11,7 @@ const ProfilePage = () => {
       <BankAccountInfo />
       <div className="flex flex-wrap content-center justify-center space-x-20 py-10">
         <ProfileButton color='bg-black' >ล้างข้อมูล</ProfileButton>
-        <ProfileButton color='bg-blue-600'>ยืนยันข้อมูล</ProfileButton>
+        <ProfileButton color='bg-skyblue'>ยืนยันข้อมูล</ProfileButton>
       </div>
     </div>
   );
