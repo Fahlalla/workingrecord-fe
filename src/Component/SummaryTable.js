@@ -1,14 +1,14 @@
 const SummaryTable = () => {
   const NotExport = () => {
     return (
-      <div className="text-center bg-red-300 text-red-800 w-2/2 rounded-full">
+      <div className="text-center bg-gray-200 text-gray-500 w-2/2 rounded-full">
         Not Export
       </div>
     );
   };
   const Exported = () => {
     return (
-      <div className="text-center bg-green-300 text-green-800 w-2/2 rounded-full">
+      <div className="text-center bg-blue-300 text-black-800 w-2/2 rounded-full">
         Exported
       </div>
     );
