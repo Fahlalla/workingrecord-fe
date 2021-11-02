@@ -3,6 +3,7 @@ import UploadFile from "./UploadFile.js";
 import DropdownInput from "./DropdownInput.js";
 import ProfileIcon from "../../Asset/profile-icon.svg";
 import DateInput from "./DateInput.js";
+import { useState, useEffect } from "react";
 
 const PersonalInfo = () => {
   const province = [
@@ -20,7 +21,17 @@ const PersonalInfo = () => {
     { value: "Non Muang" },
     { value: "Nan" },
   ];
+  const [name,setName] = useState("")
+  const [lastName,setLastName] = useState("")
+  const [idCard,setIDCard] = useState("")
+  const [phoneNo,setPhoneNo] = useState("")
+  const [address,setAddress] = useState("")
+  const [zipCode,setZipCode] = useState("")
 
+  useEffect(() => {
+    console.log(name)
+  }, [name, lastName, idCard, phoneNo, address, zipCode])
+  // handleChange()
   return (
     <div className="flex h-auto">
       <div className="flex-col space-y-5">
@@ -29,7 +40,7 @@ const PersonalInfo = () => {
           <img src={ProfileIcon} className="items-center w-6 ml-2"/>
         </div>
         <div className="flex space-x-10">
-          <ProfileInput label="ชื่อ" />
+          <ProfileInput label="ชื่อ" value={name}/>
           <ProfileInput label="นามสกุล" />
           <ProfileInput label="เลขบัตรประชาชน" />
         </div>

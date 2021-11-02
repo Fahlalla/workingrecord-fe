@@ -1,4 +1,4 @@
-const ProfileInput = ({ label, disabled }) => {
+const ProfileInput = ({ label, disabled, value, onChange }) => {
   return (
     <div className="flex-col">
       <div>{label}</div>
@@ -8,6 +8,7 @@ const ProfileInput = ({ label, disabled }) => {
           disabled && "bg-gray-300"
         }`}
         type="text"
+        value={value} onChange={onChange}
       />
     </div>
   );
