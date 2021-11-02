@@ -1,4 +1,4 @@
-import { IndividualInformation as TableData } from "../IndividualInformation";
+import { IndividualInformations as TableDatas } from "../IndividualInformations";
 
 
 const SummaryTable = () => {
@@ -17,7 +17,7 @@ const SummaryTable = () => {
         </tr>
       </thead>
       <tbody>
-        {TableData.map((data, index) => {
+        {TableDatas.map((data, index) => {
           return (
             <tr className="h-10" key={index}>
               <td>{index + 1}</td>

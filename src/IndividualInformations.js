@@ -1,4 +1,4 @@
-export const IndividualInformation = [
+export const IndividualInformations = [
   {
     id: 0,
     name: "Pui Pui",

@@ -1,16 +1,16 @@
-import { IndividualInformation as TableData } from "../IndividualInformation";
+import { IndividualInformations as TableData } from "../IndividualInformations";
 
 const Table = () => {
   const NotSubmitted = () => {
     return (
-      <div className="text-center bg-red-300 text-red-800 w-1/2 rounded-full">
+      <div className="w-1/2 text-center text-red-800 bg-red-300 rounded-full">
         Not submit
       </div>
     );
   };
   const Submitted = () => {
     return (
-      <div className="text-center bg-green-300 text-green-800 w-1/2 rounded-full">
+      <div className="w-1/2 text-center text-green-800 bg-green-300 rounded-full">
         Submitted
       </div>
     );
@@ -18,7 +18,7 @@ const Table = () => {
 
   return (
     <table className="text-left">
-      <thead className="border-b-2 mb-2">
+      <thead className="mb-2 border-b-2">
         <tr>
           <th className="w-2/12">Name</th>
           <th className="w-2/12">Email</th>

@@ -3,6 +3,7 @@ import Card from "../Component/Card.js";
 import WorklogSum from "../Component/WorklogSum.js";
 import SummaryTable from "../Component/SummaryTable.js";
 import MonthPicker from "../Component/MonthPicker.js";
+import { AdminProfiles } from "../AdminProfiles.js";
 
 
 const SummaryPayment = () => {
@@ -16,17 +17,19 @@ const SummaryPayment = () => {
         </div>
       </div>
       <div className="flex justify-between mt-8">
-        <Card />
-        <Card />
-        <Card />
+        {AdminProfiles.map((adminProfile) => {
+          return (
+            <Card data={adminProfile}/>
+          )
+        })}
       </div>
       <div className="mt-8">
         <SummaryTable />
-        <div className="flex justify-center font-bold text-lg">รวมยอดเงิน 3,000,000 บาท </div>
+        <div className="flex justify-center text-lg font-bold">รวมยอดเงิน 3,000,000 บาท </div>
         <div></div>
         <div>
          <div className="flex flex-wrap content-center justify-center">
-             <button className="font-bold w-80 h-14 text-white rounded-full text-lg " style = {{backgroundColor:'#00B6EF'}}>
+             <button className="text-lg font-bold text-white rounded-full w-80 h-14 " style = {{backgroundColor:'#00B6EF'}}>
                 ยืนยันการโอนครบถ้วน และส่งให้บัญชี
               </button>
           </div>
