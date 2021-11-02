@@ -78,8 +78,8 @@ const Menubar = () => {
   };
 
   return (
-    <div className="flex">
-      <div className="h-screen px-10 text-center text-white bg-gray-800">
+    <div className="flex bg-gray-800">
+      <div className="h-screen px-10 text-center text-white">
         <img src={logoOdds} alt="logo" className="mt-6" />
         {menuItem.map((data, index) => {
           return (

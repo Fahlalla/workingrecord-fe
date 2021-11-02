@@ -7,9 +7,7 @@ import SummaryTable from "./SummaryTable";
 const Summary = () => {
   return (
     <div className="flex h-full w-full">
-      <div className="flex items-start content-start h-full">
         <Menubar />
-      </div>
       <div className="w-full pt-4 px-12">
         <div className="text-3xl mb-14 font-bold">Summary</div>
         <div className="flex justify-between">
