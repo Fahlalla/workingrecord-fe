@@ -127,7 +127,7 @@ const SummaryTable = () => {
     },
   ];
   return (
-    <table className="text-center">
+    <table className="text-center w-full">
       <thead className="border-b-2 mb-2">
         <tr>
           <th className="w-2/12 text-left">Full Name</th>
