@@ -15,16 +15,16 @@ const Summary = () => {
         <div className="flex justify-between">
           <div className="flex flex-col justify-end">
             <div>
-              <ul className="flex cursor-pointer">
-                <li className="py-2 px-6 bg-white rounded-t-lg bg-blue-400">
+              <ul className="flex cursor-pointe">
+                <button className="py-2 px-6 rounded-t-lg bg-gray-200 focus:bg-blue-400 focus:text-white ">
                   รายการที่กรอกแล้ว
-                </li>
-                <li className="py-2 px-6 bg-white rounded-t-lg text-gray-500 bg-gray-200">
+                </button>
+                <button className="py-2 px-6 rounded-t-lg text-gray-500 bg-gray-200 focus:bg-blue-400 focus:text-white">
                   คนที่กรอกแล้ว
-                </li>
-                <li className="py-2 px-6 bg-white rounded-t-lg text-gray-500 bg-gray-200">
+                </button>
+                <button className="py-2 px-6 rounded-t-lg text-gray-500 bg-gray-200 focus:bg-blue-400 focus:text-white">
                   คนที่ยังไม่ได้กรอก
-                </li>
+                </button>
               </ul>
             </div>
           </div>

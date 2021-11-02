@@ -46,8 +46,7 @@ const Menubar = () => {
       viewBox="0 0 20 20"
       fill="currentColor"
     >
-      <path d="M12 2H2.83L8.83 8L2.83 14H12V16H0V14L6 8L0 2V0H12V2Z"
-      />
+      <path d="M12 2H2.83L8.83 8L2.83 14H12V16H0V14L6 8L0 2V0H12V2Z" />
     </svg>
   );
 
@@ -95,7 +94,7 @@ const Menubar = () => {
                 }`}
               >
                 {data.logo}
-                <span>{data.name}</span>
+                <psan>{data.name}</psan>
               </Link>
             </>
           );
