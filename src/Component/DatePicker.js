@@ -9,14 +9,14 @@ const DatePickers = () => {
   const [startDate, setStartDate] = useState(new Date());
   const iconCalendarStyle = {
     position: "absolute",
-    padding: "1% 1% 0 11%",
+    padding: "1% 1% 0 8%",
     display: "flex",
   };
 
   return (
     <label className="flex rounded-md border-2 border-gray-300">
       <DatePicker
-        className="py-3 w-full text-center px-3 h-14 "
+        className="py-3 w-full px-3 h-14"
         selected={startDate}
         onChange={(date) => setStartDate(date)}
         dateFormat="MMMM yyyy"
