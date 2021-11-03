@@ -1,15 +1,21 @@
 import Menubar from "./Menubar";
-import styled from "styled-components";
 import Search from "./search";
 import DatePickers from "./DatePicker";
 import SummaryTable from "./SummaryTable";
+import Vector from "../Asset/Vector.png";
 
 const Summary = () => {
   return (
     <div className="flex h-full w-full">
-        <Menubar />
+      <Menubar />
       <div className="w-full pt-4 px-12">
-        <div className="text-3xl mb-14 font-bold">Summary</div>
+        <div className="text-3xl mb-14 font-bold flex">
+          Summary
+          <div className="ml-2.5">
+            <img src={Vector} alt="vector" className="h-8 w-8" />
+          </div>
+        </div>
+
         <div className="flex justify-between">
           <div className="flex flex-col justify-end">
             <div>

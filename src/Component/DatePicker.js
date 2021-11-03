@@ -9,7 +9,7 @@ const DatePickers = () => {
   const [startDate, setStartDate] = useState(new Date());
   const iconCalendarStyle = {
     position: "absolute",
-    padding: "1% 1% 0 8%",
+    padding: "1rem 0 0 10rem",
     display: "flex",
   };
 
