@@ -27,11 +27,15 @@ const PersonalInfo = () => {
   const [phoneNo,setPhoneNo] = useState("")
   const [address,setAddress] = useState("")
   const [zipCode,setZipCode] = useState("")
-
+  
+  let handleChange=(e) => {
+    setName(e.target.value);
+  }
+  
   useEffect(() => {
     console.log(name)
   }, [name, lastName, idCard, phoneNo, address, zipCode])
-  // handleChange()
+  
   return (
     <div className="flex h-auto">
       <div className="flex-col space-y-5">
@@ -40,7 +44,7 @@ const PersonalInfo = () => {
           <img src={ProfileIcon} className="items-center w-6 ml-2"/>
         </div>
         <div className="flex space-x-10">
-          <ProfileInput label="ชื่อ" value={name}/>
+          <ProfileInput label="ชื่อ" onChange={handleChange} value={name}/>
           <ProfileInput label="นามสกุล" />
           <ProfileInput label="เลขบัตรประชาชน" />
         </div>
