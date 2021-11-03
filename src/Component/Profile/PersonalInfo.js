@@ -28,12 +28,32 @@ const PersonalInfo = () => {
   const [address,setAddress] = useState("")
   const [zipCode,setZipCode] = useState("")
   
-  let handleChange=(e) => {
+  let handleChangeName=(e) => {
     setName(e.target.value);
+  }
+  let handleChangeLastName=(e) => {
+    setLastName(e.target.value);
+  }
+  let handleChangeIDCard=(e) => {
+    setIDCard(e.target.value);
+  }
+  let handleChangePhoneNo=(e) => {
+    setPhoneNo(e.target.value);
+  }
+  let handleChangeAddress=(e) => {
+    setAddress(e.target.value);
+  }
+  let handleChangeZipCode=(e) => {
+    setZipCode(e.target.value);
   }
   
   useEffect(() => {
     console.log(name)
+    console.log(lastName)
+    console.log(idCard)
+    console.log(phoneNo)
+    console.log(address)
+    console.log(zipCode)
   }, [name, lastName, idCard, phoneNo, address, zipCode])
   
   return (
@@ -44,23 +64,23 @@ const PersonalInfo = () => {
           <img src={ProfileIcon} className="items-center w-6 ml-2"/>
         </div>
         <div className="flex space-x-10">
-          <ProfileInput label="ชื่อ" onChange={handleChange} value={name}/>
-          <ProfileInput label="นามสกุล" />
-          <ProfileInput label="เลขบัตรประชาชน" />
+          <ProfileInput label="ชื่อ" onChange={handleChangeName} value={name}/>
+          <ProfileInput label="นามสกุล" onChange={handleChangeLastName} value={lastName}/>
+          <ProfileInput label="เลขบัตรประชาชน" onChange={handleChangeIDCard} value={idCard}/>
         </div>
         <div className="flex space-x-10">
           <DateInput label="วัน เดือน ปีเกิด" />
-          <ProfileInput label="เบอร์โทรศัพท์" />
+          <ProfileInput label="เบอร์โทรศัพท์" onChange={handleChangePhoneNo} value={phoneNo}/>
           <ProfileInput label="E-mail" disabled />
         </div>
         <div className="flex space-x-10">
-          <ProfileInput label="ที่อยู่" />
+          <ProfileInput label="ที่อยู่" onChange={handleChangeAddress} value={address}/>
           <DropdownInput label="จังหวัด" options={province} />
           <DropdownInput label="เขต/อำเภอ" options={district} />
         </div>
         <div className="flex space-x-10">
           <DropdownInput label="แขวง/ตำบล" options={subDistrict} />
-          <ProfileInput label="รหัสไปรษณีย์" />
+          <ProfileInput label="รหัสไปรษณีย์" onChange={handleChangeZipCode} value={zipCode}/>
         </div>
         <div className="flex space-x-10">
           <UploadFile label="รูปบัตรประชาชน" />
