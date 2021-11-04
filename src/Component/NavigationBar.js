@@ -3,35 +3,37 @@ import { useState } from "react";
 
 const NavigationBar = () => {
   const [pathIndex, setPathIndex] = useState();
+  const nameHeader = [{name:"รายการทั้งหมด"}, {name:"คนที่กรอกแล้ว"}, {name:"คนที่ยังไม่ได้กรอก"}] 
   const list = (
     <button className="py-2 px-6 rounded-t-lg text-gray-500 bg-gray-200 focus:bg-blue-400 focus:text-white ">
-      รายการทั้งหมด
+      {nameHeader[0].name}
     </button>
   );
   const presonMakeList = (
-    <button className="py-2 px-6 rounded-t-lg text-gray-500 bg-gray-200 focus:bg-blue-400 focus:text-white">
-      คนที่กรอกแล้ว
+    <button className="py-2 px-6 rounded-t-lg text-gray-500 bg-gray-200 focus:bg-blue-400 focus:text-white" >
+      {nameHeader[1].name}
+     
     </button>
   );
   const noPresonMakeList = (
     <button className="py-2 px-6 rounded-t-lg text-gray-500 bg-gray-200 focus:bg-blue-400 focus:text-white">
-      คนที่ยังไม่ได้กรอก
+      {nameHeader[2].name}
     </button>
   );
 
   const listItem = [
     {
-      name: "ทั้งหมด",
+      
       path: "#",
       logo: list,
     },
     {
-      name: "กรอกแล้ว",
-      path: "#",
+     
+      path: "?tap=exportList",
       logo: presonMakeList,
     },
     {
-      name: "ยังไม่กรอก",
+     
       path: "#",
       logo: noPresonMakeList,
     },
