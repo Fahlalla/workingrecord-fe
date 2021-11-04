@@ -1,7 +1,6 @@
 import logoOdds from "../Asset/logo-odds.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Summary from "./Summary";
 
 const Menubar = () => {
   const [pathIndex, setPathIndex] = useState();

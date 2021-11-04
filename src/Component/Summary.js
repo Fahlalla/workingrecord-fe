@@ -3,6 +3,7 @@ import Search from "./search";
 import DatePickers from "./DatePicker";
 import SummaryTable from "./SummaryTable";
 import Vector from "../Asset/Vector.png";
+import NavigationBar from "./NavigationBar";
 
 const Summary = () => {
   return (
@@ -17,21 +18,7 @@ const Summary = () => {
         </div>
 
         <div className="flex justify-between">
-          <div className="flex flex-col justify-end">
-            <div>
-              <ul className="flex cursor-pointe">
-                <button className="py-2 px-6 rounded-t-lg text-gray-500 bg-gray-200 focus:bg-blue-400 focus:text-white ">
-                  รายการที่กรอกแล้ว
-                </button>
-                <button className="py-2 px-6 rounded-t-lg text-gray-500 bg-gray-200 focus:bg-blue-400 focus:text-white">
-                  คนที่กรอกแล้ว
-                </button>
-                <button className="py-2 px-6 rounded-t-lg text-gray-500 bg-gray-200 focus:bg-blue-400 focus:text-white">
-                  คนที่ยังไม่ได้กรอก
-                </button>
-              </ul>
-            </div>
-          </div>
+          <NavigationBar />
           <div className="flex justify-end mb-4">
             <div>
               <p className="text-lg font-bold"> Date: </p>
