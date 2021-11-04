@@ -19,7 +19,7 @@ const SummaryPayment = () => {
       <div className="flex justify-between mt-8">
         {AdminProfiles.map((adminProfile) => {
           return (
-            <Card data={adminProfile}/>
+            <Card data={adminProfile} key={adminProfile.id}/>
           )
         })}
       </div>
