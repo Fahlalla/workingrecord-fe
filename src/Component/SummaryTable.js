@@ -167,9 +167,9 @@ const SummaryTable = () => {
               {tab === "allList" &&
                 (data.status !== null ? Table(data) : <></>)}
               {tab === "exportList" &&
-                (data.status === false ? Table(data) : <></>)}
-              {tab === "nonexportList" &&
                 (data.status === true ? Table(data) : <></>)}
+              {tab === "nonexportList" &&
+                (data.status === false ? Table(data) : <></>)}
             </>
           );
         })}
