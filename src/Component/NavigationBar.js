@@ -3,16 +3,19 @@ import { useState } from "react";
 
 const NavigationBar = () => {
   const [pathIndex, setPathIndex] = useState();
-  const nameHeader = [{name:"รายการทั้งหมด"}, {name:"คนที่กรอกแล้ว"}, {name:"คนที่ยังไม่ได้กรอก"}] 
+  const nameHeader = [
+    { name: "รายการทั้งหมด" },
+    { name: "คนที่กรอกแล้ว" },
+    { name: "คนที่ยังไม่ได้กรอก" },
+  ];
   const list = (
     <button className="py-2 px-6 rounded-t-lg text-gray-500 bg-gray-200 focus:bg-blue-400 focus:text-white ">
       {nameHeader[0].name}
     </button>
   );
   const presonMakeList = (
-    <button className="py-2 px-6 rounded-t-lg text-gray-500 bg-gray-200 focus:bg-blue-400 focus:text-white" >
+    <button className="py-2 px-6 rounded-t-lg text-gray-500 bg-gray-200 focus:bg-blue-400 focus:text-white">
       {nameHeader[1].name}
-     
     </button>
   );
   const noPresonMakeList = (
@@ -23,17 +26,14 @@ const NavigationBar = () => {
 
   const listItem = [
     {
-      
       path: "#",
       logo: list,
     },
     {
-     
       path: "?tap=exportList",
       logo: presonMakeList,
     },
     {
-     
       path: "#",
       logo: noPresonMakeList,
     },
@@ -53,10 +53,8 @@ const NavigationBar = () => {
                 <Link
                   to={data.path}
                   onClick={() => handleActive(index)}
-                  className={`my-8 m-auto hover:text-pink-500 ${
-                    pathIndex === index
-                      ? "text-pink-500 border-b-2 border-pink-500"
-                      : "text-white"
+                  className={` m-auto ${
+                    pathIndex === index ? "border-b-2" : "text-white"
                   }`}
                 >
                   {data.logo}
