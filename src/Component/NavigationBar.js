@@ -26,7 +26,7 @@ const NavigationBar = () => {
 
   const listItem = [
     {
-      path: "#",
+      path: "?tap=allList",
       logo: list,
     },
     {
@@ -34,7 +34,7 @@ const NavigationBar = () => {
       logo: presonMakeList,
     },
     {
-      path: "#",
+      path: "?tap=nonexportList",
       logo: noPresonMakeList,
     },
   ];

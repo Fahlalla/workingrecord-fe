@@ -4,11 +4,12 @@ import DatePickers from "./DatePicker";
 import SummaryTable from "./SummaryTable";
 import Vector from "../Asset/Vector.png";
 import NavigationBar from "./NavigationBar";
-import ExportListSummary from "./ExportListSummary";
+import ExportListTable from "./ExportListTable";
+import NoneExportListTable from "./NoneExportListTable";
 
 const Summary = () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const tap = urlParams.get('tap');
+  const tap = urlParams.get("tap");
   console.log(tap);
   return (
     <div className="flex h-full w-full">
@@ -22,7 +23,7 @@ const Summary = () => {
         </div>
 
         <div className="flex justify-between">
-          <NavigationBar/>
+          <NavigationBar />
           <div className="flex justify-end mb-4">
             <div>
               <p className="text-lg font-bold"> Date: </p>
@@ -44,13 +45,9 @@ const Summary = () => {
             <Search />
           </div>
           <div className="mt-8 overflow-scroll">
-            {tap==='exportList'&& (
-              <ExportListSummary />
-            )} 
-            {tap !='exportList'&& (
-              <SummaryTable />
-            )} 
-            
+            {tap === "allList" && <SummaryTable />}
+            {tap === "exportList" && <ExportListTable />}
+            {tap === "nonexportList" && <NoneExportListTable />}
           </div>
         </div>
         <div className="flex justify-center ">
