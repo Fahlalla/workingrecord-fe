@@ -4,13 +4,8 @@ import DatePickers from "./DatePicker";
 import SummaryTable from "./SummaryTable";
 import Vector from "../Asset/Vector.png";
 import NavigationBar from "./NavigationBar";
-import ExportListTable from "./ExportListTable";
-import NoneExportListTable from "./NoneExportListTable";
 
 const Summary = () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const tap = urlParams.get("tap");
-  console.log(tap);
   return (
     <div className="flex h-full w-full">
       <Menubar />
@@ -45,9 +40,7 @@ const Summary = () => {
             <Search />
           </div>
           <div className="mt-8 overflow-scroll">
-            {tap === "allList" && <SummaryTable />}
-            {tap === "exportList" && <ExportListTable />}
-            {tap === "nonexportList" && <NoneExportListTable />}
+            <SummaryTable />
           </div>
         </div>
         <div className="flex justify-center ">

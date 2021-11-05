@@ -26,15 +26,15 @@ const NavigationBar = () => {
 
   const listItem = [
     {
-      path: "?tap=allList",
+      path: "?tab=allList",
       logo: list,
     },
     {
-      path: "?tap=exportList",
+      path: "?tab=exportList",
       logo: presonMakeList,
     },
     {
-      path: "?tap=nonexportList",
+      path: "?tab=nonexportList",
       logo: noPresonMakeList,
     },
   ];

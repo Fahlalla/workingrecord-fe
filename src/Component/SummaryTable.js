@@ -1,4 +1,7 @@
 const SummaryTable = () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const tab = urlParams.get("tab");
+
   const NotExport = () => {
     return (
       <div className="text-center bg-gray-200 text-gray-500 w-2/2 rounded-full">
@@ -100,17 +103,6 @@ const SummaryTable = () => {
       accountNumber: "1234567890",
       submitDate: "12/12/2021",
       totalSalary: "300",
-      status: false,
-      transferBy: "PP",
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      accountName: "Jill(0888888888)",
-      accountNumber: "1234567890",
-      submitDate: "12/12/2021",
-      totalSalary: "300",
       status: true,
       transferBy: "PP",
     },
@@ -126,6 +118,33 @@ const SummaryTable = () => {
       transferBy: "PP",
     },
   ];
+
+  const Table = (data) => {
+    return (
+      <>
+        <tr className="h-10">
+          <td className="text-left">{data.name}</td>
+          <td>{data.email}</td>
+          <td>{data.phone}</td>
+          <td>{data.accountName}</td>
+          <td className="pl-5">{data.accountNumber}</td>
+          <td>{data.submitDate}</td>
+          <td>{data.totalSalary}</td>
+          {data.status ? (
+            <td>
+              <Exported />
+            </td>
+          ) : (
+            <td>
+              <NotExport />
+            </td>
+          )}{" "}
+          <td>{data.transferBy}</td>
+        </tr>
+      </>
+    );
+  };
+
   return (
     <table className="text-center w-full">
       <thead className="border-b-2 mb-2">
@@ -144,25 +163,14 @@ const SummaryTable = () => {
       <tbody>
         {tableData.map((data) => {
           return (
-            <tr className="h-10">
-              <td className="text-left">{data.name}</td>
-              <td>{data.email}</td>
-              <td>{data.phone}</td>
-              <td>{data.accountName}</td>
-              <td className="pl-5">{data.accountNumber}</td>
-              <td>{data.submitDate}</td>
-              <td>{data.totalSalary}</td>
-              {data.status ? (
-                <td>
-                  <Exported />
-                </td>
-              ) : (
-                <td>
-                  <NotExport />
-                </td>
-              )}{" "}
-              <td>{data.transferBy}</td>
-            </tr>
+            <>
+              {tab === "allList" &&
+                (data.status !== null ? Table(data) : <></>)}
+              {tab === "exportList" &&
+                (data.status === false ? Table(data) : <></>)}
+              {tab === "nonexportList" &&
+                (data.status === true ? Table(data) : <></>)}
+            </>
           );
         })}
       </tbody>
