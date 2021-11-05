@@ -1,4 +1,3 @@
-import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -9,7 +8,7 @@ const MonthPicker = (props) => {
         selected={props.month}
         dateFormat="MMMM yyyy"
         showMonthYearPicker
-        onChange={month => {
+        onChange={(month) => {
           props.setSelectMonth(month);
         }}
       />

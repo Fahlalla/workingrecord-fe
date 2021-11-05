@@ -8,7 +8,7 @@ import PopupConfirm from "../Component/PopupConfirm.js";
 
 const SummaryPayment = () => {
   const [selectMonth, setSelectMonth] = useState(new Date());
-  const showPopup = () => {};
+  const [showPopup, setShowPopup] = useState(false);
   return (
     <div className="flex flex-col w-full px-12 pt-4 ">
       <div className="flex justify-between space-y-2">
@@ -31,14 +31,22 @@ const SummaryPayment = () => {
         <div>
           <div className="flex flex-wrap content-center justify-center">
             <button
+              type="button"
               className="text-lg font-bold text-white rounded-full w-80 h-14 "
               style={{ backgroundColor: "#00B6EF" }}
-              onclick={() => showPopup()}
+              onClick={() => setShowPopup(true)}
             >
               ยืนยันการโอนครบถ้วน และส่งให้บัญชี
             </button>
           </div>
-          <PopupConfirm />
+          {showPopup ? (
+            <PopupConfirm
+              isPopup={setShowPopup}
+              header="ยืนยันการโอน"
+              body="หากกดปุ่มยืนยันแล้ว ระบบจะทำการอัปเดตสถานะ และแจ้งเตือนไปยัง
+                Staff"
+            />
+          ) : null}
         </div>
       </div>
     </div>
