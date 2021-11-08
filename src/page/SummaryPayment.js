@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Card from "../Component/Card.js";
 import WorklogSum from "../Component/WorklogSum.js";
-import SummaryTable from "../Component/SummaryTable.js";
+import SummaryPaymentTable from "../Component/SummaryPaymentTable.js";
 import MonthPicker from "../Component/MonthPicker.js";
 import { AdminProfiles } from "../AdminProfiles.js";
 import PopupConfirm from "../Component/PopupConfirm.js";
@@ -23,7 +23,7 @@ const SummaryPayment = () => {
         })}
       </div>
       <div className="mt-8">
-        <SummaryTable />
+        <SummaryPaymentTable />
         <div className="flex justify-center text-lg font-bold">
           รวมยอดเงิน 3,000,000 บาท{" "}
         </div>

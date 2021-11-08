@@ -53,6 +53,16 @@ const Menubar = () => {
       />
     </svg>
   );
+  const summary = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-5 w-5 ml-1 mr-1"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path d="M12 2H2.83L8.83 8L2.83 14H12V16H0V14L6 8L0 2V0H12V2Z" />
+    </svg>
+  );
 
   const menuItem = [
     {
@@ -75,6 +85,11 @@ const Menubar = () => {
       path: "/summary-payment",
       logo: summaryPayment,
     },
+    {
+      name: "Summary",
+      path: "/summary",
+      logo: summary,
+    },
   ];
 
   return (
@@ -83,7 +98,7 @@ const Menubar = () => {
         <img src={logoOdds} alt="logo" className="mt-6" />
         {menuItem.map((data, index) => {
           return (
-            <React.Fragment key= {data.path}>
+            <React.Fragment key={data.path}>
               <Link
                 to={data.path}
                 onClick={() => setPathIndex(index)}

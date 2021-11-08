@@ -1,33 +1,176 @@
-import { IndividualInformations as TableDatas } from "../IndividualInformations";
-
-
 const SummaryTable = () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const tab = urlParams.get("tab");
+
+  const NotExport = () => {
+    return (
+      <div className="text-center bg-gray-200 text-gray-500 w-2/2 rounded-full">
+        Not Export
+      </div>
+    );
+  };
+  const Exported = () => {
+    return (
+      <div className="text-center bg-blue-300 text-black-800 w-2/2 rounded-full">
+        Exported
+      </div>
+    );
+  };
+
+  const tableData = [
+    {
+      name: "Tadsika Khongkasawan",
+      email: "Tadsika@odds.team",
+      phone: "0818888888",
+      accountName: "Jill(0888888888)",
+      accountNumber: "1234567890",
+      submitDate: "12/12/2021",
+      totalSalary: "300",
+      status: false,
+      transferBy: "PP",
+    },
+    {
+      name: "Tadsika Khongkasawan",
+      email: "Tadsika@odds.team",
+      phone: "0818888888",
+      accountName: "Jill(0888888888)",
+      accountNumber: "1234567890",
+      submitDate: "12/12/2021",
+      totalSalary: "300",
+      status: false,
+      transferBy: "PP",
+    },
+    {
+      name: "Tadsika Khongkasawan",
+      email: "Tadsika@odds.team",
+      phone: "0818888888",
+      accountName: "Jill(0888888888)",
+      accountNumber: "1234567890",
+      submitDate: "12/12/2021",
+      totalSalary: "300",
+      status: false,
+      transferBy: "PP",
+    },
+    {
+      name: "Tadsika Khongkasawan",
+      email: "Tadsika@odds.team",
+      phone: "0818888888",
+      accountName: "Jill(0888888888)",
+      accountNumber: "1234567890",
+      submitDate: "12/12/2021",
+      totalSalary: "300",
+      status: false,
+      transferBy: "PP",
+    },
+    {
+      name: "Tadsika Khongkasawan",
+      email: "Tadsika@odds.team",
+      phone: "0818888888",
+      accountName: "Jill(0888888888)",
+      accountNumber: "1234567890",
+      submitDate: "12/12/2021",
+      totalSalary: "300",
+      status: false,
+      transferBy: "PP",
+    },
+    {
+      name: "Tadsika Khongkasawan",
+      email: "Tadsika@odds.team",
+      phone: "0818888888",
+      accountName: "Jill(0888888888)",
+      accountNumber: "1234567890",
+      submitDate: "12/12/2021",
+      totalSalary: "300",
+      status: false,
+      transferBy: "PP",
+    },
+    {
+      name: "Tadsika Khongkasawan",
+      email: "Tadsika@odds.team",
+      phone: "0818888888",
+      accountName: "Jill(0888888888)",
+      accountNumber: "1234567890",
+      submitDate: "12/12/2021",
+      totalSalary: "300",
+      status: false,
+      transferBy: "PP",
+    },
+    {
+      name: "Tadsika Khongkasawan",
+      email: "Tadsika@odds.team",
+      phone: "0818888888",
+      accountName: "Jill(0888888888)",
+      accountNumber: "1234567890",
+      submitDate: "12/12/2021",
+      totalSalary: "300",
+      status: true,
+      transferBy: "PP",
+    },
+    {
+      name: "Tadsika Khongkasawan",
+      email: "Tadsika@odds.team",
+      phone: "0818888888",
+      accountName: "Jill(0888888888)",
+      accountNumber: "1234567890",
+      submitDate: "12/12/2021",
+      totalSalary: "300",
+      status: true,
+      transferBy: "PP",
+    },
+  ];
+
+  const Table = (data) => {
+    return (
+      <>
+        <tr className="h-10">
+          <td className="text-left">{data.name}</td>
+          <td>{data.email}</td>
+          <td>{data.phone}</td>
+          <td>{data.accountName}</td>
+          <td className="pl-5">{data.accountNumber}</td>
+          <td>{data.submitDate}</td>
+          <td>{data.totalSalary}</td>
+          {data.status ? (
+            <td>
+              <Exported />
+            </td>
+          ) : (
+            <td>
+              <NotExport />
+            </td>
+          )}{" "}
+          <td>{data.transferBy}</td>
+        </tr>
+      </>
+    );
+  };
+
   return (
-    <table className="text-center ">
-      <thead className="mb-2 border-b-2 ">
+    <table className="text-center w-full">
+      <thead className="border-b-2 mb-2">
         <tr>
-          <th className="w-1/24">No.</th>
-          <th className="w-2/12">Full Name</th>
-          <th className="w-2/12">Account No.</th>
-          <th className="w-2/12">Daily Income</th>
-          <th className="w-2/12">Total Salary</th>
-          <th className="w-2/12">Manday</th>
-          <th className="w-2/12">Upload</th>
-          <th className="w-2/12">Status</th>
+          <th className="w-2/12 text-left">Full Name</th>
+          <th className="w-2/12">Email</th>
+          <th className="w-1/12">Phone</th>
+          <th className="w-1/12">Account Name</th>
+          <th className="w-2/12 pl-5">Account No.</th>
+          <th className="w-1/12">Submit date</th>
+          <th className="w-1/12">Total salary</th>
+          <th className="w-1/12">Status</th>
+          <th className="w-2/12">Transfer By</th>
         </tr>
       </thead>
       <tbody>
-        {TableDatas.map((data, index) => {
+        {tableData.map((data) => {
           return (
-            <tr className="h-10" key={index}>
-              <td>{index + 1}</td>
-              <td>{data.name}</td>
-              <td>{data.accountNumber}</td>
-              <td>{data.dailyIncome}</td>
-              <td>{data.totalSalary}</td>
-              <td>{data.manDay}</td>
-              <td>{data.Upload}</td>
-            </tr>
+            <>
+              {tab === "allList" &&
+                (data.status !== null ? Table(data) : <></>)}
+              {tab === "exportList" &&
+                (data.status === true ? Table(data) : <></>)}
+              {tab === "nonexportList" &&
+                (data.status === false ? Table(data) : <></>)}
+            </>
           );
         })}
       </tbody>
