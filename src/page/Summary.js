@@ -1,14 +1,12 @@
-import Menubar from "./Menubar";
-import Search from "./search";
-import DatePickers from "./DatePicker";
-import SummaryTable from "./SummaryTable";
+import Search from "../Component/search";
+import DatePickers from "../Component/DatePicker";
+import SummaryTable from "../Component/SummaryTable";
 import Vector from "../Asset/Vector.png";
-import NavigationBar from "./NavigationBar";
+import NavigationBar from "../Component/NavigationBar";
 
 const Summary = () => {
   return (
     <div className="flex h-full w-full">
-      <Menubar />
       <div className="w-full pt-4 px-12">
         <div className="text-3xl mb-14 font-bold flex">
           Summary

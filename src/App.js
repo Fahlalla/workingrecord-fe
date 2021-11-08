@@ -1,20 +1,17 @@
-import Home from "./page/Home";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
-import Summary from "./Component/Summary";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import PageWithMenubar from "./page/PageWithMenubar";
 
-const App = () => {
+export default function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/">
-          <Redirect to="/individual" />
-        </Route>
-        <Route exact path="/individual" component={Home} />
-        <Route exact path="/history" component={Home} />
-        <Route exact path="/profile" component={Home} />
-        <Route exact path="/summary" component={Summary} />
-      </Switch>
-    </BrowserRouter>
+    <React.Fragment>
+      <div className="app-container">
+        <Router>
+          <Switch>
+            <Route path="/" component={PageWithMenubar} />
+          </Switch>
+        </Router>
+      </div>
+    </React.Fragment>
   );
-};
-export default App;
+}
