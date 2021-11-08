@@ -1,6 +1,6 @@
 const SummaryTable = () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const tab = urlParams.get("tab");
+  const tab = urlParams.get("tab") ? urlParams.get("tab") : "allList";
 
   const NotExport = () => {
     return (
