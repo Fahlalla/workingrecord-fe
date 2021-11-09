@@ -41,7 +41,7 @@ const UploadFile = ({ label }) => {
         />
       </div>
       {selectedFile && (
-        <div className="relative h-32 shadow-md border border-gray-200 rounded-md w-80 focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none bg-white flex justify-center items-center">
+        <div className="relative h-44 shadow-md border border-gray-200 rounded-md w-80 focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none bg-white flex justify-center items-center">
           <img src={preview} alt="preview image" className="max-h-full max-w-full"/>
         </div>
       )}
