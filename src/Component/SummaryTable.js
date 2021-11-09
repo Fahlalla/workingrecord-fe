@@ -1,3 +1,5 @@
+import { IndividualInformations as tableData } from "../IndividualInformations";
+import { AdminProfiles } from "../AdminProfiles";
 const SummaryTable = () => {
   const urlParams = new URLSearchParams(window.location.search);
   const tab = urlParams.get("tab") ? urlParams.get("tab") : "allList";
@@ -16,108 +18,6 @@ const SummaryTable = () => {
       </div>
     );
   };
-
-  const tableData = [
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      accountName: "Jill(0888888888)",
-      accountNumber: "1234567890",
-      submitDate: "12/12/2021",
-      totalSalary: "300",
-      status: false,
-      transferBy: "PP",
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      accountName: "Jill(0888888888)",
-      accountNumber: "1234567890",
-      submitDate: "12/12/2021",
-      totalSalary: "300",
-      status: false,
-      transferBy: "PP",
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      accountName: "Jill(0888888888)",
-      accountNumber: "1234567890",
-      submitDate: "12/12/2021",
-      totalSalary: "300",
-      status: false,
-      transferBy: "PP",
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      accountName: "Jill(0888888888)",
-      accountNumber: "1234567890",
-      submitDate: "12/12/2021",
-      totalSalary: "300",
-      status: false,
-      transferBy: "PP",
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      accountName: "Jill(0888888888)",
-      accountNumber: "1234567890",
-      submitDate: "12/12/2021",
-      totalSalary: "300",
-      status: false,
-      transferBy: "PP",
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      accountName: "Jill(0888888888)",
-      accountNumber: "1234567890",
-      submitDate: "12/12/2021",
-      totalSalary: "300",
-      status: false,
-      transferBy: "PP",
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      accountName: "Jill(0888888888)",
-      accountNumber: "1234567890",
-      submitDate: "12/12/2021",
-      totalSalary: "300",
-      status: false,
-      transferBy: "PP",
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      accountName: "Jill(0888888888)",
-      accountNumber: "1234567890",
-      submitDate: "12/12/2021",
-      totalSalary: "300",
-      status: true,
-      transferBy: "PP",
-    },
-    {
-      name: "Tadsika Khongkasawan",
-      email: "Tadsika@odds.team",
-      phone: "0818888888",
-      accountName: "Jill(0888888888)",
-      accountNumber: "1234567890",
-      submitDate: "12/12/2021",
-      totalSalary: "300",
-      status: true,
-      transferBy: "PP",
-    },
-  ];
 
   const Table = (data) => {
     return (
@@ -139,7 +39,7 @@ const SummaryTable = () => {
               <NotExport />
             </td>
           )}{" "}
-          <td>{data.transferBy}</td>
+          <td>{AdminProfiles.find(x => x.id === data.transferBy).name}</td>
         </tr>
       </>
     );

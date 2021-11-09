@@ -11,7 +11,7 @@ export const IndividualInformations = [
     dailyIncome: 2000,
     totalSalary: 40000,
     manDay: 20,
-    transferBy: "roofroof"
+    transferBy: "6189162e16d43472c037b4b4"
   },
   {
     id: 1,
@@ -25,7 +25,7 @@ export const IndividualInformations = [
     dailyIncome: 2000,
     totalSalary: 40000,
     manDay: 20,
-    transferBy: "janejane"
+    transferBy: "6189163da920b710675a0e09"
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ export const IndividualInformations = [
     dailyIncome: 2000,
     totalSalary: 40000,
     manDay: 20,
-    transferBy: "jaujau"
+    transferBy: "618916482dd789041a431d14"
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ export const IndividualInformations = [
     dailyIncome: 2000,
     totalSalary: 40000,
     manDay: 20,
-    transferBy: "roofroof"
+    transferBy: "6189162e16d43472c037b4b4"
   },
   {
     id: 4,
@@ -67,7 +67,7 @@ export const IndividualInformations = [
     dailyIncome: 2000,
     totalSalary: 40000,
     manDay: 20,
-    transferBy: "janejane"
+    transferBy: "6189163da920b710675a0e09"
   },
   {
     id: 5,
@@ -81,7 +81,7 @@ export const IndividualInformations = [
     dailyIncome: 2000,
     totalSalary: 40000,
     manDay: 20,
-    transferBy: "jaujau"
+    transferBy: "618916482dd789041a431d14"
   },
   {
     id: 6,
@@ -95,7 +95,7 @@ export const IndividualInformations = [
     dailyIncome: 2000,
     totalSalary: 40000,
     manDay: 20,
-    transferBy: "roofroof"
+    transferBy: "6189162e16d43472c037b4b4"
   },
   {
     id: 7,
@@ -109,7 +109,7 @@ export const IndividualInformations = [
     dailyIncome: 2000,
     totalSalary: 40000,
     manDay: 20,
-    transferBy: "janejane"
+    transferBy: "6189163da920b710675a0e09"
   },
   {
     id: 8,
@@ -123,7 +123,7 @@ export const IndividualInformations = [
     dailyIncome: 2000,
     totalSalary: 40000,
     manDay: 20,
-    transferBy: "jaujau"
+    transferBy: "618916482dd789041a431d14"
   },
   {
     id: 9,
@@ -137,7 +137,7 @@ export const IndividualInformations = [
     dailyIncome: 2000,
     totalSalary: 40000,
     manDay: 20,
-    transferBy: "roofroof"
+    transferBy: "6189162e16d43472c037b4b4"
   },
   {
     id: 10,
@@ -151,7 +151,7 @@ export const IndividualInformations = [
     dailyIncome: 2000,
     totalSalary: 40000,
     manDay: 20,
-    transferBy: "janejane"
+    transferBy: "6189163da920b710675a0e09"
   },
   {
     id: 11,
@@ -165,7 +165,7 @@ export const IndividualInformations = [
     dailyIncome: 2000,
     totalSalary: 40000,
     manDay: 20,
-    transferBy: "jaujau"
+    transferBy: "618916482dd789041a431d14"
   },
   {
     id: 12,
@@ -179,7 +179,7 @@ export const IndividualInformations = [
     dailyIncome: 2000,
     totalSalary: 40000,
     manDay: 20,
-    transferBy: "roofroof"
+    transferBy: "6189162e16d43472c037b4b4"
   },
   {
     id: 13,
@@ -193,7 +193,7 @@ export const IndividualInformations = [
     dailyIncome: 2000,
     totalSalary: 40000,
     manDay: 20,
-    transferBy: "janejane"
+    transferBy: "6189163da920b710675a0e09"
   },
   {
     id: 14,
@@ -207,6 +207,6 @@ export const IndividualInformations = [
     dailyIncome: 2000,
     totalSalary: 40000,
     manDay: 20,
-    transferBy: "jaujau"
+    transferBy: "618916482dd789041a431d14"
   },
 ]
