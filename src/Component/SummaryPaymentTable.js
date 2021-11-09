@@ -1,6 +1,6 @@
-import { IndividualInformations as TableDatas } from "../IndividualInformations";
 
-const SummaryPaymentTable = () => {
+const SummaryPaymentTable = (props) => {
+  const tableDatas = props.data
   return (
     <table className="text-center ">
       <thead className="mb-2 border-b-2 ">
@@ -16,7 +16,7 @@ const SummaryPaymentTable = () => {
         </tr>
       </thead>
       <tbody>
-        {TableDatas.map((data, index) => {
+        {tableDatas.map((data, index) => {
           return (
             <tr className="h-10" key={index}>
               <td>{index + 1}</td>
