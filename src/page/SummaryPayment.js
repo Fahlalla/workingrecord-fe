@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Card from "../Component/Card.js";
 import WorklogSum from "../Component/WorklogSum.js";
 import SummaryPaymentTable from "../Component/SummaryPaymentTable.js";
@@ -10,7 +10,16 @@ import { IndividualInformations } from "../IndividualInformations.js";
 const SummaryPayment = () => {
   const [selectMonth, setSelectMonth] = useState(new Date());
   const [showPopup, setShowPopup] = useState(false);
-  const [selectadminProfile, setSelectadminProfile] = useState(null);
+  const [selectadminProfile, setSelectadminProfile] = useState("P'Roof");
+
+  const filterState = useMemo(
+    () =>
+      IndividualInformations.filter(
+        (data) => data.transferName === selectadminProfile
+      ),
+    [selectadminProfile]
+  );
+
   return (
     <div className="flex flex-col w-full px-12 pt-4 overflow-scroll">
       <div className="flex justify-between space-y-2">
@@ -26,20 +35,18 @@ const SummaryPayment = () => {
               data={adminProfile}
               key={adminProfile.id}
               select={setSelectadminProfile}
-              onClick={() => selectadminProfile}
             />
           );
         })}
       </div>
       <div className="mt-8">
-        <SummaryPaymentTable data={IndividualInformations} />
+        <SummaryPaymentTable data={filterState} />
         <div className="flex content-center justify-center">
           <div className="flex  justify-center rounded border-2 w-60 h-12 font-bold my-4 py-2">
             <div>รวมยอดเงิน </div>
             <div>3,000,000 บาท </div>
           </div>
         </div>
-        <div></div>
         <div>
           <div className="flex flex-wrap content-center justify-center">
             <button
