@@ -1,6 +1,6 @@
 const Search = () => {
   return (
-    <form class="relative list-disc">
+    <form className="relative list-disc">
       <div className="flex justify-start">
         <div className="relative">
           <svg
@@ -10,8 +10,8 @@ const Search = () => {
             className="absolute text-gray-400 transform -translate-y-1/2 left-3 top-1/2"
           >
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
             />
           </svg>

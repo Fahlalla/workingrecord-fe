@@ -1,15 +1,18 @@
 module.exports = {
-    corePlugins: {
-    
-      tableLayout: false,
+  corePlugins: {
+    tableLayout: false,
+  },
+  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {
+      colors: {
+        'skyblue': "#00B6EF",
+      },
     },
-    purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-    darkMode: false, // or 'media' or 'class'
-    theme: {
-      extend: {},
-    },
-    variants: {
-      extend: {},
-    },
-    plugins: [],
-  }
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+};
