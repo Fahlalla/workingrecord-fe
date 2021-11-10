@@ -19,15 +19,19 @@ const SummaryPayment = () => {
           <MonthPicker month={selectMonth} setSelectMonth={setSelectMonth} />
         </div>
       </div>
-      <div className="flex justify-between mt-8">
+      <div className="flex justify-between mt-8 ">
         {AdminProfiles.map((adminProfile) => {
-          return <Card data={adminProfile} key={adminProfile.id} select={setSelectadminProfile} />;
+          return <Card data={adminProfile} key={adminProfile.id} select={setSelectadminProfile}
+          onClick ={() =>selectadminProfile} />;
         })}
       </div>
       <div className="mt-8">
         <SummaryPaymentTable data={IndividualInformations}/>
-        <div className="flex justify-center text-lg font-bold">
-          รวมยอดเงิน 3,000,000 บาท{" "}
+        <div className="flex content-center justify-center">
+          <div className="flex  justify-center rounded border-2 w-60 h-12 font-bold my-4 py-2">
+          <div>รวมยอดเงิน </div>
+          <div>3,000,000 บาท{" "}</div>
+          </div>
         </div>
         <div></div>
         <div>
