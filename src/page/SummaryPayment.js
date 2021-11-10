@@ -5,10 +5,12 @@ import SummaryPaymentTable from "../Component/SummaryPaymentTable.js";
 import MonthPicker from "../Component/MonthPicker.js";
 import { AdminProfiles } from "../AdminProfiles.js";
 import PopupConfirm from "../Component/PopupConfirm.js";
+import { IndividualInformations } from "../IndividualInformations.js";
 
 const SummaryPayment = () => {
   const [selectMonth, setSelectMonth] = useState(new Date());
   const [showPopup, setShowPopup] = useState(false);
+  const [selectadminProfile,setSelectadminProfile] = useState(null)
   return (
     <div className="flex flex-col w-full px-12 pt-4 ">
       <div className="flex justify-between space-y-2">
@@ -17,15 +19,19 @@ const SummaryPayment = () => {
           <MonthPicker month={selectMonth} setSelectMonth={setSelectMonth} />
         </div>
       </div>
-      <div className="flex justify-between mt-8">
+      <div className="flex justify-between mt-8 ">
         {AdminProfiles.map((adminProfile) => {
-          return <Card data={adminProfile} key={adminProfile.id} />;
+          return <Card data={adminProfile} key={adminProfile.id} select={setSelectadminProfile}
+          onClick ={() =>selectadminProfile} />;
         })}
       </div>
       <div className="mt-8">
-        <SummaryPaymentTable />
-        <div className="flex justify-center text-lg font-bold">
-          รวมยอดเงิน 3,000,000 บาท{" "}
+        <SummaryPaymentTable data={IndividualInformations}/>
+        <div className="flex content-center justify-center">
+          <div className="flex  justify-center rounded border-2 w-60 h-12 font-bold my-4 py-2">
+          <div>รวมยอดเงิน </div>
+          <div>3,000,000 บาท{" "}</div>
+          </div>
         </div>
         <div></div>
         <div>
