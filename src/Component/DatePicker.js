@@ -14,7 +14,7 @@ const DatePickers = () => {
   };
 
   return (
-    <label className="flex rounded-md border-2 border-gray-300">
+    <label className="flex rounded-md border-2 border-gray-300 relative">
       <DatePicker
         className="py-3 w-full px-3 h-14"
         selected={startDate}
