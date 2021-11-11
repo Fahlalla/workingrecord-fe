@@ -9,7 +9,7 @@ const cardStyle = {
 const Card = (props) => {
   return (
     <div style={cardStyle}>
-      <button onClick={() => props.select(props.data.name)}>
+      <button onClick={() => props.select(props.data.id)}>
         <div className="flex text-black">{props.data.name}</div>
         <div className="flex justify-between text-black">
           <p>โอนแล้ว</p>
