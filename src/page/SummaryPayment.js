@@ -10,20 +10,20 @@ import { IndividualInformations } from "../IndividualInformations.js";
 const SummaryPayment = () => {
   const [selectMonth, setSelectMonth] = useState(new Date());
   const [showPopup, setShowPopup] = useState(false);
-  const [selectadminProfile, setSelectadminProfile] = useState("P'Roof");
+  const mockId = "6189163da920b710675a0e09"
+  const [selectAdminProfile, setSelectAdminProfile] = useState(mockId);
 
-  const filterState = useMemo(
-    () =>
+  const filterState = useMemo(() =>
       IndividualInformations.filter(
-        (data) => data.transferName === selectadminProfile
+        (data) => data.transferBy === selectAdminProfile
       ),
-    [selectadminProfile]
+    [selectAdminProfile]
   );
 
   return (
     <div className="flex flex-col w-full px-12 pt-4 overflow-scroll">
       <div className="flex justify-between space-y-2">
-        <WorklogSum month={selectMonth} />
+        <WorklogSum month={selectMonth} amount={IndividualInformations}/>
         <div>
           <MonthPicker month={selectMonth} setSelectMonth={setSelectMonth} />
         </div>
@@ -34,21 +34,15 @@ const SummaryPayment = () => {
             <Card
               data={adminProfile}
               key={adminProfile.id}
-              select={setSelectadminProfile}
+              select={setSelectAdminProfile}
             />
           );
         })}
       </div>
       <div className="mt-8">
         <SummaryPaymentTable data={filterState} />
-        <div className="flex content-center justify-center">
-          <div className="flex  justify-center rounded border-2 w-60 h-12 font-bold my-4 py-2">
-            <div>รวมยอดเงิน </div>
-            <div>3,000,000 บาท </div>
-          </div>
-        </div>
         <div>
-          <div className="flex flex-wrap content-center justify-center">
+          <div className="flex flex-wrap content-center justify-center pt-20">
             <button
               type="button"
               className="text-lg font-bold text-white rounded-full w-80 h-14 "
