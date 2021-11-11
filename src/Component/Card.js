@@ -1,17 +1,11 @@
-const cardStyle = {
-  flex: "",
-  border:"solid",
-  color:"lightblue",
 
-
-};
 
 const Card = (props) => {
   return (
-    <div style={cardStyle}>
+    <div className="p-6 text-xl rounded-md text-blue-400  px-14 hover:text-gray-500 bg-gray-100">
       <button onClick={() => props.select(props.data.name)}>
-        <div className="flex text-black">{props.data.name}</div>
-        <div className="flex justify-between text-black">
+        <div className="font-bold ">{props.data.name}</div>
+        <div className="flex justify-between text-black ">
           <p>โอนแล้ว</p>
           <p>{props.data.transferedAmount}</p>
         </div>
