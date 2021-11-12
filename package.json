@@ -7,6 +7,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "craco": "^0.0.3",
+    "cypress": "^9.0.0",
     "init": "^0.1.2",
     "react": "^17.0.2",
     "react-datepicker": "^4.3.0",
@@ -22,7 +23,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress": "cypress open"
   },
   "eslintConfig": {
     "extends": [
