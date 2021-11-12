@@ -69,26 +69,31 @@ const Menubar = () => {
       name: "Individual",
       path: "/individual",
       logo: individual,
+      dataCy: "individual"
     },
     {
       name: "History",
       path: "/history",
       logo: history,
+      dataCy: "history"
     },
     {
       name: "Profile",
       path: "/profile",
       logo: profile,
+      dataCy: "profile"
     },
     {
       name: "Summary Payment",
       path: "/summary-payment",
       logo: summaryPayment,
+      dataCy: "summary-payment"
     },
     {
       name: "Summary",
       path: "/summary",
       logo: summary,
+      dataCy: "summary"
     },
   ];
 
@@ -100,13 +105,14 @@ const Menubar = () => {
           return (
             <React.Fragment key={data.path}>
               <Link
+                data-cy={data.dataCy}
                 to={data.path}
                 onClick={() => setPathIndex(index)}
                 className={`my-8 flex m-auto hover:text-pink-500 ${
                   pathIndex === index
                     ? "text-pink-500 border-b-2 border-pink-500"
                     : "text-white"
-                }`}
+                  }`}
                 key={data.path}
               >
                 {data.logo}

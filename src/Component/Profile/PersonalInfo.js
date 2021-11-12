@@ -64,7 +64,7 @@ const PersonalInfo = () => {
           <img src={ProfileIcon} className="items-center w-6 ml-2"/>
         </div>
         <div className="flex space-x-10">
-          <ProfileInput label="ชื่อ" onChange={handleChangeName} value={name}/>
+          <ProfileInput label="ชื่อ" onChange={handleChangeName} value={name} dataCy="name-input"/>
           <ProfileInput label="นามสกุล" onChange={handleChangeLastName} value={lastName}/>
           <ProfileInput label="เลขบัตรประชาชน" onChange={handleChangeIDCard} value={idCard}/>
         </div>
