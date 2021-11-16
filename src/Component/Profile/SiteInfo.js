@@ -46,14 +46,14 @@ const SiteInfo = () => {
           <div className="font-bold text-2xl">Site</div>
         </div>
         <div className="flex space-x-10">
-          <ProfileInput label="Site" onChange={handleChangeSite} value={site}/>
-          <ProfileInput label="Team" onChange={handleChangeTeam} value={team}/>
-          <ProfileInput label="ผู้แนะนำเข้า Odds" onChange={handleChangeRecommender} value={recommender}/>
+          <ProfileInput label="Site" onChange={handleChangeSite} value={site} dataCy="site-input"/>
+          <ProfileInput label="Team" onChange={handleChangeTeam} value={team} dataCy="team-input"/>
+          <ProfileInput label="ผู้แนะนำเข้า Odds" onChange={handleChangeRecommender} value={recommender} dataCy="recommender-input"/>
         </div>
         <div className="flex space-x-10">
-          <ProfileInput label="Discord Account" onChange={handleChangeDiscordAccount} value={discordAccount}/>
-          <ProfileInput label="รายได้ต่อวัน" onChange={handleChangeDailyIncome} value={dailyIncome}/>
-          <ProfileInput label="รายได้ต่อชั่วโมง (Part-time)" onChange={handleChangeParttimeIncome} value={parttimeIncome}/>
+          <ProfileInput label="Discord Account" onChange={handleChangeDiscordAccount} value={discordAccount} dataCy="discordAccount-input"/>
+          <ProfileInput label="รายได้ต่อวัน" onChange={handleChangeDailyIncome} value={dailyIncome} dataCy="dailyIncome-input"/>
+          <ProfileInput label="รายได้ต่อชั่วโมง (Part-time)" onChange={handleChangeParttimeIncome} value={parttimeIncome} dataCy="parttimeIncome-input"/>
         </div>
       </div>
     </div>
