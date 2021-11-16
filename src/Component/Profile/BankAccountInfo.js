@@ -19,7 +19,7 @@ const BankAccountInfo = () => {
   let handleChangebankAccount=(e) => {
     setBankAccount(e.target.value);
   }
-  let handleChangebankBrancht=(e) => {
+  let handleChangebankBranch=(e) => {
     setBankBranch(e.target.value);
   }
   let handleChangebankAccountNumber=(e) => {
@@ -38,12 +38,12 @@ const BankAccountInfo = () => {
       <div className="flex flex-col space-y-5 pt-5">
         <div className="font-bold text-2xl">บัญชีธนาคาร</div>
         <div className="flex space-x-10">
-          <ProfileInput label="ชื่อบัญชี" onChange={handleChangebankAccount} value={bankAccount}/>
-          <DropdownInput label="ธนาคาร" options={province} />
-          <ProfileInput label="สาขา" onChange={handleChangebankBrancht} value={bankBranch}/>
+          <ProfileInput label="ชื่อบัญชี" onChange={handleChangebankAccount} value={bankAccount} dataCy="bankAccount-input"/>
+          <DropdownInput label="ธนาคาร" options={province} disabled/>
+          <ProfileInput label="สาขา" onChange={handleChangebankBranch} value={bankBranch} dataCy="branch-input"/>
         </div>
         <div className="flex space-x-10">
-          <ProfileInput label="เลขที่บัญชี" onChange={handleChangebankAccountNumber} value={bankAccountNumber}/>
+          <ProfileInput label="เลขที่บัญชี" onChange={handleChangebankAccountNumber} value={bankAccountNumber} dataCy="accountNumber-input"/>
         </div>
         <div className="flex space-x-10">
           <UploadFile label="รูปบัญชีธนาคาร" />

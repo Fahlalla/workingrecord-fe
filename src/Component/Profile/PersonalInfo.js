@@ -65,22 +65,22 @@ const PersonalInfo = () => {
         </div>
         <div className="flex space-x-10">
           <ProfileInput label="ชื่อ" onChange={handleChangeName} value={name} dataCy="name-input"/>
-          <ProfileInput label="นามสกุล" onChange={handleChangeLastName} value={lastName}/>
-          <ProfileInput label="เลขบัตรประชาชน" onChange={handleChangeIDCard} value={idCard}/>
+          <ProfileInput label="นามสกุล" onChange={handleChangeLastName} value={lastName} dataCy="lastName-input"/>
+          <ProfileInput label="เลขบัตรประชาชน" onChange={handleChangeIDCard} value={idCard} dataCy="IDCard-input"/>
         </div>
         <div className="flex space-x-10">
           <DateInput label="วัน เดือน ปีเกิด" />
-          <ProfileInput label="เบอร์โทรศัพท์" onChange={handleChangePhoneNo} value={phoneNo}/>
+          <ProfileInput label="เบอร์โทรศัพท์" onChange={handleChangePhoneNo} value={phoneNo} dataCy="phoneNo-input"/>
           <ProfileInput label="E-mail" disabled />
         </div>
         <div className="flex space-x-10">
-          <ProfileInput label="ที่อยู่" onChange={handleChangeAddress} value={address}/>
-          <DropdownInput label="จังหวัด" options={province} />
-          <DropdownInput label="เขต/อำเภอ" options={district} />
+          <ProfileInput label="ที่อยู่" onChange={handleChangeAddress} value={address} dataCy="address-input"/>
+          <DropdownInput label="จังหวัด" options={province} dataCy="province-input"/>
+          <DropdownInput label="เขต/อำเภอ" options={district} dataCy="district-input"/>
         </div>
         <div className="flex space-x-10">
-          <DropdownInput label="แขวง/ตำบล" options={subDistrict} />
-          <ProfileInput label="รหัสไปรษณีย์" onChange={handleChangeZipCode} value={zipCode}/>
+          <DropdownInput label="แขวง/ตำบล" options={subDistrict} dataCy="subDistrict-input"/>
+          <ProfileInput label="รหัสไปรษณีย์" onChange={handleChangeZipCode} value={zipCode} dataCy="zipCode-input"/>
         </div>
         <div className="flex space-x-10">
           <UploadFile label="รูปบัตรประชาชน" />
