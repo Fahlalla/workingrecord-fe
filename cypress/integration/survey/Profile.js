@@ -1,0 +1,35 @@
+describe('Home page', ()=>{
+    it('Successfully load', ()=>{
+        cy.visit('http://localhost:3000')
+    })
+    it('Found header', ()=>{
+        cy.get('[data-cy=homepage-header]', {timeout:4000}).invoke('text').should('contain',"ชื่อ ...")
+    })
+})
+describe('Profile page', ()=>{
+    it('Successfully load', ()=>{
+        cy.get('[data-cy=profile]', {timeout:4000}).contains("Profile").click()
+        cy.url().should('contain',"profile")
+    })
+    it('Input field', ()=>{
+        cy.get('[data-cy=name-input]', {timeout:4000}).type("Pui")
+        cy.get('[data-cy=lastName-input]', {timeout:4000}).type("Pui pui")
+        cy.get('[data-cy=IDCard-input]', {timeout:4000}).type("1234567890123")
+        cy.get('[data-cy=phoneNo-input]', {timeout:4000}).type("0812345678")
+        cy.get('[data-cy=address-input]', {timeout:4000}).type("11/1")
+        cy.get('[data-cy=province-input]', {timeout:4000}).select('Nan')
+        cy.get('[data-cy=district-input]', {timeout:4000}).select('Chatuchuk')
+        cy.get('[data-cy=subDistrict-input]', {timeout:4000}).select('Nan')
+        // cy.get('[data-cy=bangkok]', {timeout:4000}).select('')
+        cy.get('[data-cy=zipCode-input]', {timeout:4000}).type("10000")
+        cy.get('[data-cy=site-input]', {timeout:4000}).type("Foundation Center")
+        cy.get('[data-cy=team-input]', {timeout:4000}).type("Team A")
+        cy.get('[data-cy=recommender-input]', {timeout:4000}).type("Bambam")
+        cy.get('[data-cy=discordAccount-input]', {timeout:4000}).type("Pui pui")
+        cy.get('[data-cy=dailyIncome-input]', {timeout:4000}).type("500")
+        cy.get('[data-cy=parttimeIncome-input]', {timeout:4000}).type("500")
+        cy.get('[data-cy=bankAccount-input]', {timeout:4000}).type("Pui pui")
+        cy.get('[data-cy=branch-input]', {timeout:4000}).type("ChatuChuk")
+        cy.get('[data-cy=accountNumber-input]', {timeout:4000}).type("0123456789")
+    })
+})
