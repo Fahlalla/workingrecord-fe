@@ -13,8 +13,8 @@ const WorklogSum = (props) => {
   return (
     <div className="flex flex-col space-y-5 ">
       <div className="font-bold text-4xl">สรุปรายการขอเบิก Worklog</div>
-      <div className="text-xl">
-        {text}
+      <div className="text-xl" data-cy="month" >
+      {text}
       </div>
     </div>
   );

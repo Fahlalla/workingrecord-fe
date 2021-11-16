@@ -24,8 +24,8 @@ const SummaryPayment = () => {
     <div className="flex flex-col w-full px-12 pt-4 overflow-scroll">
       <div className="flex justify-between space-y-2">
         <WorklogSum month={selectMonth} amount={IndividualInformations}/>
-        <div>
-          <MonthPicker month={selectMonth} setSelectMonth={setSelectMonth} />
+        <div  data-cy="MonthPicker">
+          <MonthPicker data-cy="month" month={selectMonth} setSelectMonth={setSelectMonth} />
         </div>
       </div>
       <div className="flex justify-between mt-8 ">
