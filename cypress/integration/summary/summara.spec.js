@@ -6,16 +6,22 @@ describe("open link", () => {
     cy.get(".text-3xl", { timeout: 4000 }).contains("Summary");
   });
 });
+
 describe("click tab All list", () => {
   it("click tab", () => {
     cy.get("[href='/summary?tab=allList'] > .py-2")
       .contains("รายการทั้งหมด")
-      .click();
-    cy.url().should("contain", "allList");
   });
-  it("check column status all", () => {
-    if (1 === 1) {
-      cy.get(".px-12 > .pt-4").contains("Export");
-    }
-  });
+
+  it("check tab Name list", () => {
+    cy.get(".py-2")
+    .contains("คนที่กรอกแล้ว")
+  })
+
+  it("check tab Name list", () => {
+    cy.get("[href='/summary?tab=nonexportList'] > .py-2")
+    .contains("คนที่ยังไม่ได้กรอก")
+  })
+
 });
+
