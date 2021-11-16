@@ -10,10 +10,43 @@ describe("Summary Payment page", () => {
       .click();
     cy.url().should("contain", "summary-payment");
   });
-  it("Display current month by default", () => {
-    cy.get("[data-cy=MonthPicker]", { timeout: 3000 })
-    .contains('พฤศจิกายน 2021').click();
-    //.select("setSelectMonth");
-    //cy.get('[data-cy=month]',{timeout:3000}).contains("")
+
+  it("Selected month", () => {
+    cy.get("[data-cy=selectedmonth]", { timeout: 4000 })
+      .click()
+      .contains("พ.ย.")
+      .click();
+  });
+
+  it("Display selected month", () => {
+    cy.get("[data-cy=month]", { timeout: 4000 })
+    .contains("พฤศจิกายน");
+  });
+});
+
+describe("When select someone's card should be display data correctly", () => {
+  it("Select P'roof should be return correctly data", () => {
+    cy.get("[data-cy=card]", { timeout: 10000 })
+    .contains("P'Roof").click();
+    cy.get("[data-cy=transferedAmount]")
+    .contains("9999");
+    cy.get("[data-cy=totalAmount]")
+    .contains("999999");
+  });
+  it("Select P'Jane should be return correctly data", () => {
+    cy.get("[data-cy=card]", { timeout: 10000 })
+    .contains("P'Jane").click();
+    cy.get("[data-cy=transferedAmount]")
+    .contains("9990");
+    cy.get("[data-cy=totalAmount]")
+    .contains("999990");
+  });
+  it("Select P'Jua should be return correctly data", () => {
+    cy.get("[data-cy=card]", { timeout: 10000 })
+    .contains("P'Jua").click();
+    cy.get("[data-cy=transferedAmount]")
+    .contains("9000");
+    cy.get("[data-cy=totalAmount]")
+    .contains("900000");
   });
 });

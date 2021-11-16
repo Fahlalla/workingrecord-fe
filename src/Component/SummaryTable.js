@@ -39,7 +39,7 @@ const SummaryTable = () => {
               <NotExport />
             </td>
           )}{" "}
-          <td>{AdminProfiles.find(x => x.id === data.transferBy).name}</td>
+          <td >{AdminProfiles.find(x => x.id === data.transferBy).name}</td>
         </tr>
       </>
     );

@@ -11,7 +11,7 @@ const iconCalendarStyle = {
 
 const MonthPicker = (props) => {
   return (
-    <label className="flex rounded-md border-2 border-gray-300">
+    <label className="flex rounded-md border-2 border-gray-300" data-cy="selectedmonth" >
       <DatePicker
         selected={props.month}
         locale={th}
