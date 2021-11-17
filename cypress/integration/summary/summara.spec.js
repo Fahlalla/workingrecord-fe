@@ -8,21 +8,21 @@ describe("เข้าหน้า summary", () => {
 });
 
 describe("พบแท็บ รายการทั้งหมด, คนที่กรอกแล้ว, คนที่ยังไม่ได้กรอก ", () => {
-  it("tab one", () => {
+  it("รายการทั้งหมด", () => {
     cy.get("[href='/summary?tab=allList'] > .py-2").contains("รายการทั้งหมด");
   });
 
-  it("tab two", () => {
+  it("คนที่กรอกแล้ว", () => {
     cy.get(".py-2").contains("คนที่กรอกแล้ว");
   });
 
-  it("tab three", () => {
+  it("คนที่ยังไม่ได้กรอก", () => {
     cy.get("[href='/summary?tab=nonexportList'] > .py-2").contains(
       "คนที่ยังไม่ได้กรอก"
     );
   });
 
-  it("defalut active tab one", () => {
-    // cy.get("").
+  it("default active เป็นแท็บ รายการทั้งหมด", () => {
+    cy.url().should("contain", "/summary");
   });
 });
