@@ -23,7 +23,14 @@ describe('Profile page', ()=>{
         cy.get('[data-cy=branch-input]', {timeout:4000}).type("ChatuChuk")
         cy.get('[data-cy=accountNumber-input]', {timeout:4000}).type("0123456789")
     })
+    it('กดปุ่ม upload file ', ()=>{
+        const filepath = '../src/Asset/Profile.png'
+        cy.get('input[type="file"]').attachFile(filepath)
+        cy.get('#uploaded-files').contains('Profile.png')
+    })
+
     it('กดปุ่ม "ยืนยันข้อมูล" แสดงว่าบันทึกข้อมูลเสร็จสิ้น', ()=>{
         cy.get('[data-cy=confirm-button]', {timeout:4000}).click()
     })
+
 })
