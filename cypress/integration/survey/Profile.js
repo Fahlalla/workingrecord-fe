@@ -1,17 +1,9 @@
-describe('Home page', ()=>{
-    it('Successfully load', ()=>{
-        cy.visit('http://localhost:3000')
-    })
-    it('Found header', ()=>{
-        cy.get('[data-cy=homepage-header]', {timeout:4000}).invoke('text').should('contain',"ชื่อ ...")
-    })
-})
 describe('Profile page', ()=>{
-    it('Successfully load', ()=>{
+    it('Profile ถูกแสดงขึ้นมา โดยที่ ลำดับบนสุดของหน้า มีคำว่า "ประวัติส่วนตัว"', ()=>{
         cy.get('[data-cy=profile]', {timeout:4000}).contains("Profile").click()
         cy.url().should('contain',"profile")
     })
-    it('Input field', ()=>{
+    it('กรอกข้อมูลทุก field ให้ครบ', ()=>{
         cy.get('[data-cy=name-input]', {timeout:4000}).type("Pui")
         cy.get('[data-cy=lastName-input]', {timeout:4000}).type("Pui pui")
         cy.get('[data-cy=IDCard-input]', {timeout:4000}).type("1234567890123")
@@ -20,7 +12,6 @@ describe('Profile page', ()=>{
         cy.get('[data-cy=province-input]', {timeout:4000}).select('Nan')
         cy.get('[data-cy=district-input]', {timeout:4000}).select('Chatuchuk')
         cy.get('[data-cy=subDistrict-input]', {timeout:4000}).select('Nan')
-        // cy.get('[data-cy=bangkok]', {timeout:4000}).select('')
         cy.get('[data-cy=zipCode-input]', {timeout:4000}).type("10000")
         cy.get('[data-cy=site-input]', {timeout:4000}).type("Foundation Center")
         cy.get('[data-cy=team-input]', {timeout:4000}).type("Team A")
@@ -31,5 +22,8 @@ describe('Profile page', ()=>{
         cy.get('[data-cy=bankAccount-input]', {timeout:4000}).type("Pui pui")
         cy.get('[data-cy=branch-input]', {timeout:4000}).type("ChatuChuk")
         cy.get('[data-cy=accountNumber-input]', {timeout:4000}).type("0123456789")
+    })
+    it('กดปุ่ม "ยืนยันข้อมูล" แสดงว่าบันทึกข้อมูลเสร็จสิ้น', ()=>{
+        cy.get('[data-cy=confirm-button]', {timeout:4000}).click()
     })
 })
