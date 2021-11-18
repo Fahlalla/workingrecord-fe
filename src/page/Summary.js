@@ -3,8 +3,31 @@ import DatePickers from "../Component/DatePicker";
 import SummaryTable from "../Component/SummaryTable";
 import Vector from "../Asset/Vector.png";
 import NavigationBar from "../Component/NavigationBar";
+import { IndividualInformations as tableData } from "../IndividualInformations";
+import { CSVLink } from "react-csv"
 
 const Summary = () => {
+
+  const headers = [
+    {lebel: "Name", key: "name"},
+    {lebel: "E-mail", key: "email"},
+    {lebel: "Phone", key: "phone"},
+    {lebel: "Contact", key: "contact"},
+    {lebel: "Site", key: "site"},
+    {lebel: "Status", key: "status"},
+    {lebel: "Account Number", key: "accountNumber"},
+    {lebel: "Daily Income", key: "dailyIncome"},
+    {lebel: "Total Salary", key: "totalSalary"},
+    {lebel: "Man Day", key: "manDay"},
+    {lebel: "Transfer By", key: "transferBy"},
+    {lebel: "Transfer Name", key: "transferName"},
+  ];
+
+  const csvReport = {
+    filename: "report.csv",
+    headers: headers,
+    data: tableData
+  };
   return (
     <div className="flex h-full w-full overflow-scroll">
       <div className="w-full pt-4 px-12">
@@ -25,9 +48,9 @@ const Summary = () => {
               </div>
             </div>
             <div className="flex flex-col justify-end ml-6">
-              <button className="font-bold w-40 h-14 text-white bg-blue-400 rounded-full">
+              <CSVLink {...csvReport} className="font-bold w-40 h-14 text-white bg-blue-400 rounded-full">
                 Export
-              </button>
+              </CSVLink>
             </div>
           </div>
         </div>
