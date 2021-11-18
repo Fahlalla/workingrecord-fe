@@ -23,7 +23,7 @@ const SummaryPayment = () => {
   return (
     <div className="flex flex-col w-full px-12 pt-4 overflow-scroll">
       <div className="flex justify-between space-y-2">
-        <WorklogSum month={selectMonth} amount={IndividualInformations}/>
+        <WorklogSum month={selectMonth} individualInformations={IndividualInformations}/>
         <div>
           <MonthPicker month={selectMonth} setSelectMonth={setSelectMonth} />
         </div>
@@ -48,6 +48,7 @@ const SummaryPayment = () => {
               className="text-lg font-bold text-white rounded-full w-80 h-14 "
               style={{ backgroundColor: "#00B6EF" }}
               onClick={() => setShowPopup(true)}
+              data-cy="confirmTransferBtn"
             >
               ยืนยันการโอนครบถ้วน และส่งให้บัญชี
             </button>
@@ -56,8 +57,7 @@ const SummaryPayment = () => {
             <PopupConfirm
               isPopup={setShowPopup}
               header="ยืนยันการโอน"
-              body="หากกดปุ่มยืนยันแล้ว ระบบจะทำการอัปเดตสถานะ และแจ้งเตือนไปยัง
-                Staff"
+              body="หากกดปุ่มยืนยันแล้ว ระบบจะทำการอัปเดตสถานะ และแจ้งเตือนไปยัง Staff"
             />
           ) : null}
         </div>

@@ -1,14 +1,14 @@
-const formatCurrency = (amount) => {
-  return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+const formatCurrency = (input) => {
+  return input.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 const WorklogSum = (props) => {
-  let amount = 0;
-  props.amount.forEach(data => {
-    amount += data.totalSalary
+  let sum = 0;
+  props.individualInformations.forEach(data => {
+    sum += data.totalSalary
   });
 
-  let text = `ประจำเดือน ${props.month.toLocaleString("th", { month: "long", year: "numeric"})} ณ วันที่ 25 ยอดที่ต้องโอนทั้งหมด ${formatCurrency(amount)} บาท`;
+  let text = `ประจำเดือน ${props.month.toLocaleString("th", { month: "long", year: "numeric"})} ณ วันที่ 25 ยอดที่ต้องโอนทั้งหมด ${formatCurrency(sum)} บาท`;
 
   return (
     <div className="flex flex-col space-y-5 ">

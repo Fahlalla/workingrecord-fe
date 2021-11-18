@@ -50,3 +50,23 @@ describe("When select someone's card should be display data correctly", () => {
     .contains("900000");
   });
 });
+
+describe("When click Confirm transfer button should display confirm popup", () => {
+
+  it("should found confirm transfer button", () => {
+    cy.get("[data-cy=confirmTransferBtn]").contains('ยืนยันการโอนครบถ้วน และส่งให้บัญชี');
+  });
+
+  it("should display confirm popup when clicked confirmTransferBtn", () => {
+    cy.get("[data-cy=confirmTransferBtn]").click();
+    cy.get(".text-3xl").contains("ยืนยันการโอน");
+    cy.get(".my-4").contains("หากกดปุ่มยืนยันแล้ว ระบบจะทำการอัปเดตสถานะ และแจ้งเตือนไปยัง Staff");
+    cy.get(".bg-blue-400").contains("ยืนยัน");
+  })
+
+  it("should hide confirm popup when click ยกเลิก", () => {
+    cy.get(".text-red-500").click();
+    cy.get("[data-cy=confirmTransferPopup]").should("not.exist");
+  });
+
+})
