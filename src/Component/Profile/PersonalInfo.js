@@ -61,7 +61,7 @@ const PersonalInfo = () => {
       <div className="flex-col space-y-5">
         <div className="flex font-bold text-2xl">
           ประวัติส่วนตัว
-          <img src={ProfileIcon} className="items-center w-6 ml-2"/>
+          <img src={ProfileIcon} className="items-center w-6 ml-2" alt="preview profile upload"/>
         </div>
         <div className="flex space-x-10">
           <ProfileInput label="ชื่อ" onChange={handleChangeName} value={name} dataCy="name-input"/>
@@ -83,7 +83,7 @@ const PersonalInfo = () => {
           <ProfileInput label="รหัสไปรษณีย์" onChange={handleChangeZipCode} value={zipCode} dataCy="zipCode-input"/>
         </div>
         <div className="flex space-x-10">
-          <UploadFile label="รูปบัตรประชาชน" />
+          <UploadFile label="รูปบัตรประชาชน" dataCy="id-card-upload" />
         </div>
       </div>
     </div>
