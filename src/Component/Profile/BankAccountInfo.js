@@ -46,7 +46,7 @@ const BankAccountInfo = () => {
           <ProfileInput label="เลขที่บัญชี" onChange={handleChangebankAccountNumber} value={bankAccountNumber} dataCy="accountNumber-input"/>
         </div>
         <div className="flex space-x-10">
-          <UploadFile label="รูปบัญชีธนาคาร" />
+          <UploadFile label="รูปบัญชีธนาคาร" dataCy="book-bank-uplaod" />
         </div>
       </div>
     </div>

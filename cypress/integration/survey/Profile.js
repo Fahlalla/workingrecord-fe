@@ -28,7 +28,9 @@ describe('Profile page', ()=>{
     })
     it('กดปุ่ม upload file ', ()=>{
         const filepath = 'Profile.png'
-        cy.get('input[type="file"]').attachFile(filepath)
+        // cy.get('input[type="file"]').attachFile(filepath)
+        cy.get('[data-cy=id-card-upload').attachFile(filepath)
+        cy.get('[data-cy=book-bank-uplaod]').attachFile(filepath)
     })
 
     it('กดปุ่ม "ยืนยันข้อมูล" แสดงว่าบันทึกข้อมูลเสร็จสิ้น', ()=>{
