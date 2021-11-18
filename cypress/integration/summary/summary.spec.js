@@ -26,3 +26,23 @@ describe("พบแท็บ รายการทั้งหมด, คนท�
     cy.url().should("contain", "/summary");
   });
 });
+
+describe("สามารถกดปุ่ม export ได้", () => {
+  it("กดปุ่ม Export", () => {
+    cy.get(".justify-end > .font-bold").contains("Export").click();
+  });
+});
+
+describe("สามารถค้นหาด้วย e-mail ได้", () => {
+  it("กรอก e-mail Kai@odds.team", () => {
+    cy.get(".relative > .py-2").type("Kai@odds.team");
+  });
+
+  it("กดปุ่ม ค้นหา", () => {
+    cy.get(".justify-start > .flex").contains("ค้นหา").click();
+  });
+
+  it("หากค้นหาได้จะเจอ e-mail Kai@odds.team", () => {
+    cy.get(".px-12 > .pt-4").contains("Kai@odds.team");
+  });
+});
