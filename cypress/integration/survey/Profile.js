@@ -2,10 +2,12 @@ describe('Profile page', ()=>{
     it("เข้าหน้าแรก", () => {
         cy.visit("http://localhost:3000");
       });
+
     it('Profile ถูกแสดงขึ้นมา โดยที่ ลำดับบนสุดของหน้า มีคำว่า "ประวัติส่วนตัว"', ()=>{
         cy.get('[data-cy=profile]', {timeout:4000}).contains("Profile").click()
         cy.url().should('contain',"/profile")
     })
+
     it('กรอกข้อมูลทุก field ให้ครบ', ()=>{
         cy.get('[data-cy=name-input]', {timeout:4000}).type("Pui")
         cy.get('[data-cy=lastName-input]', {timeout:4000}).type("Pui pui")
@@ -26,6 +28,14 @@ describe('Profile page', ()=>{
         cy.get('[data-cy=branch-input]', {timeout:4000}).type("ChatuChuk")
         cy.get('[data-cy=accountNumber-input]', {timeout:4000}).type("0123456789")
     })
+
+    it('เลือกวัน เดือน ปีเกิด', ()=>{
+        cy.get('[data-cy=date-input]', {timeout:4000}).click()
+        cy.contains('Next').click()
+        cy.contains('25').click()
+
+    })
+    
     it('กดปุ่ม upload file ', ()=>{
         const filepath = 'Profile.png'
         // cy.get('input[type="file"]').attachFile(filepath)

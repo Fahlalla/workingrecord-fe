@@ -69,7 +69,7 @@ const PersonalInfo = () => {
           <ProfileInput label="เลขบัตรประชาชน" onChange={handleChangeIDCard} value={idCard} dataCy="IDCard-input"/>
         </div>
         <div className="flex space-x-10">
-          <DateInput label="วัน เดือน ปีเกิด" />
+          <DateInput label="วัน เดือน ปีเกิด" dataCy="date-input"/>
           <ProfileInput label="เบอร์โทรศัพท์" onChange={handleChangePhoneNo} value={phoneNo} dataCy="phoneNo-input"/>
           <ProfileInput label="E-mail" disabled />
         </div>
