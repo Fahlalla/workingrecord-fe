@@ -1,5 +1,3 @@
-import { lowerCase } from "lodash";
-
 const DropdownInput = ({ label, options, disabled, dataCy }) => {
   let optionList =
     options.length > 0 &&
