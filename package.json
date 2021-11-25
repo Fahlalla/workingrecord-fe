@@ -50,11 +50,12 @@
   "devDependencies": {
     "@cypress/request": "2.88.7",
     "autoprefixer": "^9",
+    "cypress": "^9.1.0",
     "cypress-file-upload": "^5.0.8",
     "postcss": "^7",
     "start-server-and-test": "^1.14.0"
   },
-  "engines" : { 
-    "node" : ">=16.0.0" 
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
