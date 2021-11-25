@@ -13,10 +13,11 @@ jobs:
           node-version: '16'
       # Install NPM dependencies, cache them correctly
       - name: install dependencies
-        run: yarn install
+        run: yarn --frozen-lockfile
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
+          install: false
           build: npm run build
           start: npm start
