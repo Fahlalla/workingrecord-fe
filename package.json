@@ -53,5 +53,8 @@
     "cypress-file-upload": "^5.0.8",
     "postcss": "^7",
     "start-server-and-test": "^1.14.0"
+  },
+  "engines" : { 
+    "node" : ">=16.0.0" 
   }
 }
